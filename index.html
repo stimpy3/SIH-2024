@@ -5,21 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="#" type="image/x-icon"><!--LOGO YET TO BE DECIDED-->
     <link rel="stylesheet" href="farmer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap, https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+
     <title>Farmer</title><!-- NAME YET TO BE DECIDED-->
 </head>
 <body>
     <main class="background">
-        <div class="loginSignup">
-          <p id="signup">Sign Up</p>
-          <section>
-            <p>Email Adress/Mob No.</p>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <p>Set Password</p>
-            <input type="password" name="password" placeholder="Create your password" required>
-            <input type="checkbox" id="showPassword"><span>show password</span>
-            <button>Sign Up</button>
-            <p>Already have an account</p><a href="#">Log In</a>
-          </section>
+        <div class="parentLoginSignup">
+          <div class="childLoginSignup">
+            <p id="signup">Sign Up</p>
+            <section class="formContainer" id="emailContainer">
+                <p class="LableTxt" id="formLabel">Email Adress/Mob No.</p>
+                <input type="email" class="form" id="email" name="email" placeholder="Enter your email" required> 
+            </section>
+
+            <section class="formContainer" id="passwordContainer">
+                <p class="LableTxt" id="formLabel">Set Password</p>
+                <input type="password" class="form" id="password" name="password" placeholder="Create your password" required>    
+            </section>
+
+            <section class="formContainer" id="showPasswordContainer">
+                <input type="checkbox" id="showPassword">&nbsp;<span class="LableTxt">Show password</span>
+            </section>
+            
+         
+                <button id="signupBtn">Sign Up</button>
+                <section id="loginSwitchContainer">
+                    <span id="loginSwitch" class="LableTxt">Already have an account? &nbsp;&nbsp;<a class="LableTxt" href="#">Log In</a></span>
+                </section>
+          
+
+          </div>
         </div>
     </main>
 </body>
