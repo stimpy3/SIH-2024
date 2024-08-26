@@ -38,3 +38,4 @@ signupBtn.innerText="Sign Up";
 flag="onSignup";
 }
 });
+
