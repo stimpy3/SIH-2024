@@ -39,3 +39,8 @@ flag="onSignup";
 }
 });
 
+signupBtn.addEventListener("click",function(){
+    window.location.href = "mainPage.html";
+});
+
+
