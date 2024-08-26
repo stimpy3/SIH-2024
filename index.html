@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="farmer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap, https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap",href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-    <title>Krishi Nivesh</title><!-- NAME YET TO BE DECIDED-->
+    <title>Krishi</title><!-- NAME YET TO BE DECIDED-->
 </head>
 <body>
     <main class="background">
@@ -26,27 +26,38 @@
         </article>
 
         <div class="parentLoginSignup">
-          <div class="childLoginSignup">
+          <div class="childSignup">
+
             <p id="signup">Sign Up</p>
+
+            <section class="formContainer" id="buySellContainer">
+                <p class="LableTxt" id="formLabel">What are you using this Website for?</p>
+                <div class="optionContainer">
+                <div><input type="radio" name="role" value="buyer" required><label class="LableTxt">&nbsp;Buying</label></div>
+                <div><input type="radio" name="role" value="seller" required><label class="LableTxt">&nbsp;Selling</label></div>
+                </div>
+            </section>
+
+
             <section class="formContainer" id="emailContainer">
-                <p class="LableTxt" id="formLabel">Email Adress/Mob No.</p>
+                <p class="LableTxt" id="mailLabel">Email Adress/Mob No.</p>
                 <input type="email" class="form" id="email" name="email" placeholder="Enter your email" required> 
             </section>
 
             <section class="formContainer" id="passwordContainer">
-                <p class="LableTxt" id="formLabel">Set Password</p>
+                <p class="LableTxt" id="passwordLabel">Set Password</p>
                 <input type="password" class="form" id="password" name="password" placeholder="Create your password" required>    
             </section>
 
             <section class="formContainer" id="showPasswordContainer">
                 <!--See-->
-                <input type="checkbox" id="showPassword">&nbsp;<span class="LableTxt">Show password</span>
+                <input type="checkbox" id="showPassword">&nbsp;<label for="showPassword" class="LableTxt">Show Password</label>
             </section>
             
          
                 <button id="signupBtn">Sign Up</button>
                 <section id="loginSwitchContainer">
-                    <span id="loginSwitch" class="LableTxt">Already have an account? &nbsp;&nbsp;<a id="loginTxt"class="LableTxt" href="#">Log In</a></span>
+                    <span id="loginSwitch" class="LableTxt"><span id="switchTxt">Already have an account?</span> &nbsp;&nbsp;<a id="loginTxt"class="LableTxt" href="#">Log In</a></span>
                 </section>
         
           </div>
@@ -55,5 +66,6 @@
             
        
     </main>
+    <script src="krishi.js"></script>
 </body>
 </html>
