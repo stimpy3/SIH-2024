@@ -267,6 +267,7 @@ i{
 }
 }
 
+
 @media screen and (min-device-width:500px) and (max-device-width: 700px), screen and (min-width: 500px) and (max-width:700px){
     #signup{
         font-size: 3.5rem;
@@ -276,6 +277,7 @@ i{
         width: 100%;
     }
     .formContainer {
+        font-size: 1.3rem;
         margin-bottom: 30px;
     }
     .description {
@@ -315,9 +317,10 @@ i{
 
 @media screen and (min-device-width:0px) and (max-device-width: 500px), screen and (min-width: 0px) and (max-width:500px){
     #signup{
-        margin-bottom: 40px;
+        margin-bottom: 15%;
     }
     .formContainer {
+        font-size: 1.2rem;
         margin-bottom: 30px;
     }
     .description {
@@ -328,15 +331,16 @@ i{
         backdrop-filter: blur(0px);
         margin: 0px;
         border-radius: 0px;
-        padding: 10px 30px;
+        padding: 10% 30px;
         width: 100%;
         height: 100%;
-        
-    }
+        align-items: flex-start;
+        }
     .childSignup{
         border: none;
         padding: 0px 0px;
         box-shadow: none;
+        height:fit-content;
     }
     #descriptionTxt{
         display: none;
