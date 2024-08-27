@@ -49,6 +49,17 @@ signupBtn=document.querySelector("#signupBtn");
 signupBtn.addEventListener("click", function() {
     const numMailValue=numMailForm.value.trim();
     const passwordValue=passwordForm.value.trim();
+    /*
+^ : Asserts the start of the string.
+[0-9] : Matches any digit from 0 to 9.
++ : Ensures that one or more digits are present.
+$ : Asserts the end of the string.
+So, /^[0-9]+$/ will match a string that consists entirely of one 
+or more digits from start to end.
+The .test() method is used to test whether the string matches
+the regular expression. It returns true if the string matches the
+pattern and false otherwise. 
+*/
     const isNumber=numMailValue.length === 10 && /^[0-9]+$/.test(numMailValue);/*SEE*/
     // Check if the value contains "@" and "."
     const isEmail=numMailValue.includes("@") && numMailValue.includes(".");
