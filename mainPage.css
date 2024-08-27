@@ -7,7 +7,10 @@ body{
     height: 100%;
     width: 100%;/*Dont write 100vw*/
    }
-   
+ :root{
+        --navbarGreen: #418d60;
+        --navbarDarkGreen:#2b5f40;
+      }
 
 .navbar{
     width: 100%;
@@ -23,7 +26,7 @@ body{
 }
 #logo{
     background-image: url("logoBlack.png");
-    
+   
     background-size: contain;
     background-repeat: no-repeat;
     height: 80%;
@@ -37,7 +40,7 @@ body{
     margin-left: 10%;
     margin-right: 10%;
     width: 30%;
-    min-width: 260px;
+    min-width: 265px;
     height:70%;
     background-color: white;
     padding: 5px;
@@ -48,6 +51,9 @@ body{
 }
 
 .btn{
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+    user-select:none;
     background-color: inherit;
     height: 100%;
     border:none;
@@ -58,20 +64,84 @@ body{
     border-radius: 25px;
 }
 #home{
-    background-color: #000000;
+    background-color: black;
     color: white;
 }
-.searchContainer{
-    height: 100%;
-    width: 20%;
-    border: solid 2px black;
-}
+.searchContainer {
+    display: flex;
+    padding: 4px 4px 4px 8px;
+    border: none;
+    width:15%;
+    min-width: 115px;
+    height: 70%;
+    background-color: white;
+    border-radius: 60px;
+    overflow: hidden;
+    margin-right: 2%;
+    margin-left: 10%;
+    align-items: center; /* Vertically center the input and button */ 
+    border: 1px solid #ccc; /* Create a basic border */
+    box-shadow: 0px 0px 5px 5px #6565651e; 
+  }
+
+  .searchInput::placeholder { 
+    font-size: 0.9rem;
+  }
+  
+  
+  .searchContainer input[type="search"] {
+   flex:0; /*expand to fill*/
+   font-size: 1rem; 
+   outline: none; /*Important setting*/
+   width: 100%;
+   height: 100%;
+   border: none;
+   position: relative;
+   background-color: #ffffff;
+  }
+
+  .searchContainer input:focus {
+    border: none; 
+  }
+  
+  .searchContainer button{
+    flex-shrink:0;
+    padding: 0.5rem 0.5rem;
+    background-color: var(--navbarGreen);
+    border-radius: 50%;
+    color: #ffffff; 
+    border: 1px solid var(--navbarGreen);
+    cursor: pointer; /* Indicate clickable behavior */
+  }
+
+  .searchContainer button:hover{
+    background-color: var(--navbarDarkGreen);
+    border-color:var(--navbarDarkGreen);
+  }
+
 .profile{  
-    height: 100%;
-    border:solid 2px black;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
     width:10%;
+    user-select: none;
+    cursor: pointer;
+}
+.profile:hover{
+    border-radius: 30px;
+    border:solid 2px var(--navbarGreen);
+    transition: 0.3s ease;
 }
 
+#profileBtn{
+    background-color: var(--navbarGreen);
+    padding: 8px;
+    color: white;
+    border-radius: 50%;
+}
 
 
 
@@ -100,7 +170,4 @@ main{
     height: 400px;
     margin: 20px 0px;
 }
-
-
-
 
