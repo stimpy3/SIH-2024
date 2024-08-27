@@ -20,7 +20,7 @@ body{
     width: 100%;
     display:flex;
     align-items: center;
-    background-image: url("back.png");
+    background-image: url("backgroundSignupLogin.png");
     background-repeat: no-repeat;
     background-size: cover;
     
