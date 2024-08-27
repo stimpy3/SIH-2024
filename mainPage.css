@@ -23,7 +23,7 @@ body{
 }
 #logo{
     background-image: url("logoBlack.png");
-    filter:drop-shadow(5px 5px 5px #9a9a9a73);
+    
     background-size: contain;
     background-repeat: no-repeat;
     height: 80%;
