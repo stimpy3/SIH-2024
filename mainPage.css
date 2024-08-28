@@ -183,7 +183,7 @@ main{
  position:relative;
 }
 .itemImg{
-    background-image: url("onion.png");
+    background-image: url("images/onion.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     height:100%;
@@ -210,5 +210,14 @@ main{
     height: 100%;
     width: 55%;
     background-color: white;
+    font-size: 20px;    
+    
 }
-
+.Contract{
+    text-align: center;
+}
+.card:hover{
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    cursor:pointer;
+    
+}
