@@ -4,7 +4,7 @@
     box-sizing: border-box;  
      -webkit-tap-highlight-color:transparent;
 }
-}
+
 body{
     height: 100%;
     width: 100%;/*Dont write 100vw*/
