@@ -13,6 +13,7 @@ body{
         --navbarGreen: #418d60;
         --navbarDarkGreen:#2b5f40;
         --footer:#08170e;
+        --mainColor:#e8f3ec;
 
       }
 
@@ -156,7 +157,7 @@ main{
     padding-top:80px;
     width:100%;
     height: fit-content;
-    background-color:#e8f3ec;
+    background-color:var(--main);
     overflow-x:hidden;
 }
 /*#9ac5ad;
@@ -188,25 +189,28 @@ main{
 .cards{
     width: 100%;
     height: fit-content;
-    background-color:inherit;
+    background-color:#e6ebe8;;
     display:grid;
     box-sizing: border-box;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 50px; /* Add gap between grid items instead of margin */
     column-gap:20px;
-    padding:50px 30px;
+    padding:30px 30px;
+    margin-top: 30px;
+    border-top:solid 2px #e0e0e0;
 }
 
 .card{
     display:flex;
     position: relative;
-    background-color: #4b4b4b;
+    background-color: #927e50;
     border-radius: 10px;
-    height: 250px;
+    aspect-ratio: 304/200;
     margin: 20px 0px;
     overflow:hidden;
     display: flex;
     align-items: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 .card:hover{
     transform: scale(1.05);
@@ -216,54 +220,74 @@ main{
 }
 
 .itemImgContainer{
- background-image: url("images/onion.jpg");
  background-repeat: no-repeat;
- background-size: cover;
- width:100%;
+ background-size: contain;
+ width:50%;
  height:100%;
- background-color: #020202;
+ background-color: inherit;
  position:relative;
 }
 .itemDescription{
-    display: none;
     position: absolute;
     z-index: 3;
-    padding: 5px;
+    padding: 10px;
     right:15px;
     height: 90%;
-    width: 55%;
+    width: 45%;
     background-color: #1b1b1b;
     color: #ffffff;
     font-size: 1rem;
     border-radius: 25px; 
-    opacity: 0;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
-.card:hover .itemDescription{
-    display:block;  
-    opacity: 1;  
-}
+
 
 .itemName{
     color: #ffffff;
     font-size: 1.5rem;
 }
-#addBtn{
+.addBtnForm{
+    height: 30px;
+    width: 100%;
+    display: flex;
+}
+.addBtn{
     display: inline-block;
     font-size: 1rem;
-    padding: 5px;
+    padding: 0px 5px;
+    margin-right: 10px;
+    height: 100%;
     border-radius: 10px;
     background-color: var(--navbarGreen);
     color:white;
     border:none;
 }
+.numberInput{
+    flex:1;
+    outline: none;
+    height: 100%;
+}
 
+.availability{
+    width: fit-content;
+}
 
 .Contract{
     text-align: center;
 }
 
-/*footer*/
+/*--------------------------------------IMAGES----------------------------------------------------*/
+#onion{
+    background-image: url("images/onion.png");
+}
+#potato{
+    background-image: url("images/potato.png");
+}
+/*--------------------------------------IMAGES----------------------------------------------------*/
 
+
+
+/*footer--------------------------------------------------------------------------------------*/
 #questionDiv{
     box-sizing:border-box;
     display: flex;
