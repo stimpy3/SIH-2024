@@ -39,23 +39,23 @@
 
        <!--MAIN-->
         <main>
-           <section>Archit is waste of Space</section>
+          <section class="topDecor">
+            <p id="exploreTxt">Explore</p>
+            <p>contracts</p>
+         </section>
+
            <section class="cards">
 
                <div class="card">
-                 <section class="itemImgContainer">
-                    <figure class="itemImg"></figure>
-                    <section class="priceContainer">
-                       <p class="itemName">Onions</p>
-                    </section>
-                 </section>
-
+                 <figure class="itemImgContainer"></figure>
                  <section class="itemDescription">
-                    <h3 class="Contract">Contract</h3><br>
-                    <p>Qty:</p><br>
-                    <p>Amount:</p><br>
-                    <p>Delivery date:</p><br>
-                 </section>
+                  <p class="itemName">Onions</p><br>
+                  <p>Qty(in Kg): 11</p><br>
+                  <p>Cost(per Kg): 75.54</p><br>
+                  <p>Delivery date: 2 days</p><br>
+                  <button id="addBtn">Add</button>
+                  <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
+               </section>
                </div>
 
                <div class="card"></div>
@@ -95,6 +95,71 @@
         -->
      
       </header>
+
+      <div id="questionDiv">
+        <div id="innerQuestionDiv">
+             <p id="freq">Frequently Asked Questions</p>
+             <div id="questionbox">
+               <div class="questionanswer">
+                 <button class="question" onclick="ingredient()"><p>Are our ingredients organic/locally sourced?</p><p class="show" id="ing">+</p></button>
+                 <div class="answer" id="ingredientanswer"><p>We use organic milk and cream from local dairy farms, and source many of our mix-ins from local producers when possible.</p></div>  
+               </div> 
+               <div class="questionanswer">
+                 <button class="question" onclick="opening()"><p>What are our opening hours?</p><p class="show" id="open">+</p></button>
+                 <div class="answer" id="openinganswer"><p>We're open daily from 11am to 12am, with extended hours until 1am on Fridays and Saturdays.</p></div> 
+               </div>
+               <div class="questionanswer">
+                 <button class="question" onclick="nutfree()"><p>Are our ice creams nut-free?</p><p class="show" id="nutf">+</p></button>
+                 <div class="answer" id="nutfreeanswer"><p> We have several nut-free flavors, but our kitchen does process nuts. We take precautions to avoid cross-contamination, but please inform our staff of any allergies.</p></div> 
+               </div>
+               <div class="questionanswer">
+                 <button class="question" onclick="expirydate()"><p>How long does our ice cream stay fresh if you take it home?</p><p class="show" id="expd">+</p></button>
+                 <div class="answer" id="expirydateanswer"><p> Our ice cream is best enjoyed within 1-2 weeks of purchase when stored properly in a freezer at -18°C or below.</p></div>             
+               </div>  
+            </div>
+        </div>
+      </div>
+      
+      <div class="upperFooter">
+        <div class="j" id="heading">
+             <p id="historyHeading">Our History</p>
+             <div class="j" id="historyText"><p>Scoops began in 2010 when founder NIGGA started 
+              churning small batches of ice cream in his kitchen. Inspired by his grandmother's recipes
+              and a passion for unique flavors, NIGGA's creations quickly gained a following at local 
+              farmers' markets. In 2012, we opened our first shop downtown, focusing on seasonal
+              ingredients and creative combinations. Today, with three locations across the city,
+              we continue to push the boundaries of frozen treats while staying true to our small-batch,
+              artisanal roots.</p>
+            </div>
+        </div>
+
+      </div>
+        
+        </div>
+      </div>
+      
+<footer>
+  <div class="foottxt">
+    <div class="footdiv" id="know"><p class="whitetxt">Know us</p><ul style="list-style-type: none;">
+        <li><a class="footerLink">Careers</a></li>
+        <li><a class="footerLink">About us</a></li>
+        <li><a class="footerLink">releases</a></li>
+      </ul></div>
+    <div class="footdiv" id=""><p class="whitetxt">Connect</p><ul style="list-style-type: none;">
+      <li><a class="footerLink"><i class="bi bi-instagram"></i>&nbsp;Instagram</a></li>  
+      <li><a class="footerLink"><i class="bi bi-meta"></i>&nbsp;Meta</a></li>
+        <li><a class="footerLink"><i class="bi bi-twitter-x"></i>&nbsp;Twitter</a></li>
+      </ul></div>
+    <div class="footdiv" id=""><p class="whitetxt">Customer Help</p><ul style="list-style-type: none;">
+        <li><a class="footerLink">Complaints</a></li>
+        <li><a class="footerLink">Your Account</a></li>
+        <li><a class="footerLink">Refunds</a></li>
+      </ul></div>
+  </div>
+    <p class="greytxt">Conditions of Use & Sale&nbsp;&nbsp;|&nbsp;&nbsp;Privacy Notice&nbsp;&nbsp;|&nbsp;&nbsp;Interest-Based Ads</p><br>
+    <span id="poo" class="greytxt"><i class="bi bi-c-circle"></i> Demo site</span>
+</footer>
+
       <script src="mainPage.js"></script>
 </body>
 </html>
