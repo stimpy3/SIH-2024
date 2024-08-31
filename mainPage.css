@@ -5,21 +5,20 @@
      -webkit-tap-highlight-color:transparent;
 }
 
-body{
+html,body{
     height: 100%;
     width: 100%;/*Dont write 100vw*/
    }
  :root{ --navbarGray:#f3f3f3;
         --navbarGreen: #418d60;
         --navbarDarkGreen:#2b5f40;
-        --footer:#08170e;
+        --footer:#102c1b;
         --mainColor:#e8f3ec;
 
       }
 
 .navbar{
     width: 100%;
-    position: relative;
     z-index: 5;
     height:60px;
     background-color: #f3f3f3c8;
@@ -30,6 +29,7 @@ body{
     font-size: 1.1rem;
     display: flex;
     align-items:center;
+    justify-content: space-between;
     
 }
 #logo{
@@ -44,49 +44,27 @@ body{
     float:left;
 }
 
-.links{
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 30%;
-    min-width: 265px;
-    height:70%;
-    background-color: white;
-    padding: 5px;
-    border-radius: 30px;
+.searchProfile{
     display: flex;
-    justify-content: space-between;
-    box-shadow: 0px 0px 5px 5px #6565651e; 
-}
-
-.btn{
-    font-family: "Ubuntu", sans-serif;
-    cursor: pointer;
-    user-select:none;
-    background-color: inherit;
+    width: 30%;
+    min-width: 220px;
     height: 100%;
-    border:none;
-    padding: 0 10px;
-    text-decoration: none;
-    color:black;
-    font-size: 1rem;
-    border-radius: 25px;
-}
-#home{
-    background-color: black;
-    color: white;
-}
+    align-items: center;
+    justify-content: space-between;}
+
 .searchContainer {
     display: flex;
     padding: 4px 4px 4px 8px;
+    justify-content: flex-end;
     border: none;
-    width:15%;
+    width:55%;
     min-width: 115px;
     height: 70%;
     background-color: white;
     border-radius: 60px;
     overflow: hidden;
     margin-right: 2%;
-    margin-left: 10%;
+    margin-left:4%;
     align-items: center; /* Vertically center the input and button */ 
     border: 1px solid #ccc; /* Create a basic border */
     box-shadow: 0px 0px 5px 5px #6565651e; 
@@ -134,7 +112,8 @@ body{
     align-items: center;
     justify-content: center;
     height: 70%;
-    width:10%;
+    width:30%;
+    min-width: 94px;;
     user-select: none;
     cursor: pointer;
 }
@@ -151,8 +130,6 @@ body{
     border-radius: 50%;
 }
 
-
-
 main{
     padding-top:80px;
     width:100%;
@@ -162,6 +139,7 @@ main{
 }
 /*#9ac5ad;
 #8eb39e*/
+
 .topDecor{
     font-family: "Ubuntu", sans-serif;
     background-image: url("images/topDecor3.png");
@@ -177,13 +155,60 @@ main{
     position:relative;
     box-shadow:  inset 0px 0px  5px 5px #0000003e;
 }    
-       
+
+.linksContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ width: 100%;
+ height:100px;
+ background-color: #abc2a3;
+ margin-top: 30px;
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    min-width:265px;
+    height:70%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 0px 0px 5px 5px #6565651e; 
+}
+
+.btn{
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+    user-select:none;
+    background-color: inherit;
+    height: 100%;
+    border:none;
+    padding: 0 10px;
+    text-decoration: none;
+    color:black;
+    font-size: 1.5rem;
+    border-radius: 15px;  
+  
+}
+#home{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+}
+
+
 #exploreTxt{
-    font-size: clamp(9rem,6rem,4rem);/*
+    font-size:9rem/*
     background: linear-gradient(to right, #90b800, #1a9421);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;important, see what happens without this lines*/
+}
+#contractTxt{
+    font-size: 6rem;
 }
 
 .cards{
@@ -196,7 +221,6 @@ main{
     row-gap: 50px; /* Add gap between grid items instead of margin */
     column-gap:20px;
     padding:30px 30px;
-    margin-top: 30px;
     border-top:solid 2px #e0e0e0;
 }
 
@@ -339,7 +363,7 @@ main{
 #questionDiv{
     box-sizing:border-box;
     display: flex;
-    height:20%;
+    height:fit-content;
     width: 100%;
     background-image: linear-gradient(to top,black 50%,#434343);
     justify-content: center;
@@ -474,18 +498,24 @@ footer{
   .footdiv{
    font-family: "Baloo Bhai 2", sans-serif;
    text-align: center;
-   height:fit-content;
+   height:fit-content;;
    width:200px;
-   padding: 0% 1.5% 3% 1.5%;
+   padding: 0% 1.5% 1% 1.5%;
    border-bottom: 2px dotted #454545;
   }
   
   .whitetxt{
       font-size: 20px;
       color: #ffffff;
+      
   }  
+li{
+   margin-top: 5px;
+   margin-bottom:5px;
+}
+
   .footerLink:hover{
-      color: var(--blue);
+      color: white;
       cursor: pointer;
   } 
       
@@ -494,3 +524,35 @@ footer{
       font-size: 1rem;
       color: #7a7a7a;
   }
+
+  @media screen and (min-device-width: 415px) and (max-device-width: 640px), screen and (min-width: 415px) and (max-width: 640px){
+
+  .links .btn{
+    font-size: 1.2rem;
+  }
+  .topDecor{
+    height: 350px;
+  }
+  #exploreTxt{
+    font-size:7rem
+}
+#contractTxt{
+    font-size: 5rem;
+}
+  }
+
+  @media screen and (min-device-width: 0px) and (max-device-width: 415px), screen and (min-width: 0px) and (max-width: 415px){
+
+    .links .btn{
+      font-size: 1rem;
+    }
+    .topDecor{
+        height: 300px;
+      }
+      #exploreTxt{
+        font-size:5rem
+    }
+    #contractTxt{
+        font-size: 3rem;
+    }
+    }
