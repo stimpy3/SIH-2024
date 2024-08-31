@@ -644,5 +644,8 @@ box-sizing: border-box;
      .profile p{
       display: none;
      }
+      footer{
+        display: none;
+    }
 }
  
