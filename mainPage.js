@@ -7,44 +7,81 @@ navBtns.forEach(function(btn) {
 
     btn.addEventListener("click", function() {
         if(btn.id=="home"){
-            home.style.backgroundColor = highlightColor;
-            home.style.color = "white";
+            home.style.textDecoration= "underline";
+            home.style.textDecorationThickness="3px"; 
+            home.style.textUnderlineOffset= "5px"; 
             home.style.transition="0.1s ease";
            
-            marketplace.style.backgroundColor = "white";
-            marketplace.style.color = "black";
+            marketplace.style.textDecoration= "none";
           
-            contract.style.backgroundColor = "white";
-            contract.style.color = "black";
+            contract.style.textDecoration= "none";
            
         }
         else if(btn.id=="marketplace"){
-            home.style.backgroundColor = "white";
-            home.style.color = "black";
-           
-            marketplace.style.backgroundColor = highlightColor;
-            marketplace.style.color = "white";
-            marketplace.style.transition="0.1s ease";
-           
-            contract.style.backgroundColor = "white";
-            contract.style.color = "black";
+          home.style.textDecoration= "none";
+         
+          marketplace.style.textDecoration= "underline";
+          marketplace.style.textDecorationThickness="3px";  
+          marketplace.style.textUnderlineOffset= "5px"; 
+          marketplace.style.transition="0.1s ease";
+        
+          contract.style.textDecoration= "none";
           
         }
         else if(btn.id=="contract"){
-            home.style.backgroundColor = "white";
-            home.style.color = "black";
+          home.style.textDecoration= "none";
          
-            marketplace.style.backgroundColor = "white";
-            marketplace.style.color = "black";
-           
-            contract.style.backgroundColor = highlightColor;
-            contract.style.color = "white";
-            contract.style.transition="0.1s ease";
+          marketplace.style.textDecoration= "none";
+
+          contract.style.textDecoration= "underline";
+          contract.style.textDecorationThickness="3px";
+          contract.style.textUnderlineOffset= "5px";   
+          contract.style.transition="0.1s ease";
            
         }
     });
 });
+/*navbar RESTRUCTURE-----------------------------------------------------------------
+const width = window.innerWidth;
+if (width <= 650) {
+  document.querySelector(".links").style.innerHTML=`
+  <figure id="logo"></figure>
+         
+  <div class="searchProfile">  
+     <div class="searchContainer">
+           <div style="width: fit-content"><input type="search" placeholder="Search..." class="searchInput"></div>
+           <button class="searchBtn"><i class="bi bi-search"></i></button>
+     </div>
+     <div class="profile">
+           <p>Profile&nbsp;</p>
+           <div class="fa-solid fa-user" id="profileBtn"></div>
+     </div>
+  </div>
 
+   `}
+else{
+  document.querySelector(".navbar").innerHTML=`
+            <figure id="logo"></figure>
+                   
+            <div class="searchProfile">  
+               <div class="searchContainer">
+                     <div style="width: fit-content"><input type="search" placeholder="Search..." class="searchInput"></div>
+                     <button class="searchBtn"><i class="bi bi-search"></i></button>
+               </div>
+               <div class="profile">
+                     <p>Profile&nbsp;</p>
+                     <div class="fa-solid fa-user" id="profileBtn"></div>
+               </div>
+              </div>
+  
+              <div class="links">
+                 <button href="#" class="btn" id="home">Home</button>
+                 <button href="" class="btn" id="marketplace">Marketplace</button>
+                 <button href="" class="btn" id="contract">Contract</button>
+               </div>`
+    }  
+*/
+//navbar buttons-----------------------------------------------------------------
 //Manual + automatic slideshow-----------------------------------------------------------------
 
 //setInterval(changeImage, 5000); doesnt show img for first 5 sec, so didn't use
