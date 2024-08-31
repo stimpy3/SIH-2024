@@ -289,6 +289,7 @@ i{
        display: none;
     }
     .parentLoginSignup{
+         box-shadow: none;
         background-color: #ffffff;
         backdrop-filter: blur(0px);
         margin: 0px;
@@ -332,6 +333,7 @@ i{
        display: none;
     }
     .parentLoginSignup{
+         box-shadow: none;
         background-color: #ffffff;
         backdrop-filter: blur(0px);
         margin: 0px;
