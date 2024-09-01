@@ -254,7 +254,11 @@ main{
 }
 .itemDescription{
     position: absolute;
+    overflow: hidden;
     z-index: 3;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 10px;
     right:15px;
     height: 90%;
@@ -429,7 +433,7 @@ main{
 .answer{
     padding: 2px;
     font-size: 1.2rem;
-    background-color: #616161;
+    background-color: #191919;
     color: white;
     display: none;
     font-family: "Rubik", sans-serif;
@@ -525,6 +529,139 @@ li{
       font-size: 1rem;
       color: #7a7a7a;
   }
+  @media screen and (min-device-width: 860px) and (max-device-width: 1030px), screen and (min-width: 860px) and (max-width: 1030px){
+   #itemName{
+    font-size: 1.2rem;
+   }
+   .availability{
+    font-size: 0.8rem;
+   }
+   .itemDescription p{
+    font-size: 0.8rem;
+   }
+   .addBtnForm{
+    height: 25px;
+   }
+   .addBtn{
+    font-size: 0.8rem;
+    margin-right: 5px;
+   }
+  }
+
+  @media screen and (min-device-width: 720px) and (max-device-width: 860px), screen and (min-width: 720px) and (max-width: 860px){
+    #itemName{
+        font-size: 1.2rem;
+       }
+       .itemDescription{
+        right: 5px;
+       }
+       .availability{
+        font-size: 0.6rem;
+       }
+       .itemDescription p{
+        font-size: 0.7rem;
+       }
+       .addBtnForm{
+        font-size: 0.6rem;
+        height: 20px;
+        width: 95%;
+       }
+       .addBtn{
+        font-size: 0.6rem;
+        margin-right: 5px;
+       }
+       .numberInput::placeholder{
+        font-size: 0.6rem;
+    }
+    .numberInput{
+        min-width: 40px;
+    }
+  }
+
+  @media screen and (min-device-width:600px) and (max-device-width: 720px), screen and (min-width: 600px) and (max-width: 720px){
+    .cards{
+    grid-template-columns: repeat(2, 1fr);}
+    #itemName{
+        font-size: 1.2rem;
+       }
+       .availability{
+        font-size: 0.8rem;
+       }
+       .itemDescription p{
+        font-size: 0.8rem;
+       }
+       .addBtnForm{
+        height: 25px;
+       }
+       .addBtn{
+        font-size: 0.8rem;
+        margin-right: 5px;
+       }
+
+  }
+
+  @media screen and (min-device-width: 420px) and (max-device-width: 600px), screen and (min-width: 420px) and (max-width: 600px){
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+        padding:0px;
+        row-gap:0px;
+        
+    }
+        #itemName{
+            font-size: 2rem;
+           }
+
+           .availability{
+            font-size: 1.3rem;
+           }
+           .itemDescription p{
+            font-size: 1.3rem;
+           }
+           .addBtnForm{
+            height: 30px;
+           }
+           .addBtn{
+            font-size: 1.3rem;
+            margin-right: 5px;
+           }
+
+    .card{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border-top: solid 2px rgb(210, 210, 210);
+
+    }
+    .card:hover{
+        transform: scale(1);
+        box-shadow: none;  
+    }
+}
+
+@media screen and (min-device-width:0px) and (max-device-width: 420px), screen and (min-width: 0px) and (max-width: 420px){
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+        padding:0px;
+        row-gap:0px;
+        
+    }
+        .itemName{
+            font-size: 1.2rem;
+           }
+    .card{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border-top: solid 2px rgb(210, 210, 210);
+
+    }
+    .card:hover{
+        transform: scale(1);
+        box-shadow: none;  
+    }
+}
 
   @media screen and (min-device-width: 640px) and (max-device-width: 840px), screen and (min-width: 640px) and (max-width: 840px){
     #historyHeading{
@@ -620,7 +757,7 @@ box-sizing: border-box;
     font-size: 0.5rem;
 }
   }
-
+ 
   @media screen and (min-device-width: 0px) and (max-device-width: 380px), screen and (min-width: 0px) and (max-width: 380px){
   
     #logo{
@@ -644,8 +781,11 @@ box-sizing: border-box;
      .profile p{
       display: none;
      }
-      footer{
-        display: none;
-    }
+}
+  
+@media screen and (min-device-width: 0px) and (max-device-width: 470px), screen and (min-width: 0px) and (max-width: 470px){
+footer{
+    display: none;
+}
 }
  
