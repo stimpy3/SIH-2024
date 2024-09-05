@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishi-Contract page</title>
+    <title>Krishi-Home page</title>
     <script src="https://kit.fontawesome.com/9f76eb440c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="contractPage.css">
     <!--BOOSTRAP AND FONTAWESOME CDN-->
@@ -34,355 +34,317 @@
         </nav>
 
        <!--MAIN-->
-        <main>
-          <section class="topDecor">
-            <p id="exploreTxt">Explore</p>
-            <p id="contractTxt">contracts</p>
-         </section>
+       <main>
+        <section class="topDecor">
+          <p id="exploreTxt">Explore</p>
+          <p id="contractTxt">contracts</p>
+       </section>
+        <!--HOME MARKETPLACE CONTRACT-->
+       <section class="linksContainer">
+        <div class="links">
+          <button href="" class="btn" id="home">Home</button>
+          <button href="#" class="btn" id="marketplace">Marketplace</button>
+          <button href="mainPage.html" class="btn" id="contract">Contract</button>
+    </div>
+       </section>
+       <!-- Floating Create Contract Bar -->
+       <a href="create-contract.html" id="floatingButton">
+        <i class="bi bi-plus"></i> <!-- Using Bootstrap icons -->
+      </a>
+      
 
-         <section class="linksContainer">
-          <div class="links">
-            <a href="mainPage.html" class="btn" id="home">Home</a>
-            <a href="marketplacePage.html" class="btn" id="marketplace">Marketplace</a>
-            <a href="contractPage.html" class="btn" id="contract">Contract</a>
-      </div>
-         </section>
+       <section class="cards">
 
-           <section class="cards">
+        <div class="card">
+          <figure class="itemImgContainer"  id="onion"></figure>
+          <section class="itemDescription">
+              <p class="itemName">Onions</p><br>
+              <section class="availability" >Quantity:10 
+                 quintal</section><br>
+              <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+              <p>Delivery date: 13/08/2024</p><br>
+              <section class="addBtnForm">
+                <button class="addBtn" onclick="openContractPage()">View Contract</button>
 
-            <div class="card">
-              <figure class="itemImgContainer"  id="onion"></figure>
-              <section class="itemDescription">
-                  <p class="itemName" id="itemName">Onions</p>
-                  <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                  <p>Cost(per Kg): ₹75.54</p>
-                  <p>Delivery date: 5 days</p>
-                  <section class="addBtnForm">
-                      <button class="addBtn">Add</button>
-                      <input type="number" placeholder="Quantity" class="numberInput" min="1" max="1000" required>
-                  </section>
+
               </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="potato"></figure>
-             <section class="itemDescription">
-                 <p class="itemName" id="itemName">Potatoes</p>
-                 <section class="availability" style="color: rgb(53, 161, 53);">865Kg In Stock</section>
-                 <p>Cost(per Kg): ₹50.00</p>
-                 <p>Delivery date: 1 days</p>
-                 <section class="addBtnForm">
-                     <button class="addBtn">Add</button>
-                     <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                 </section>
-             </section>    
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="muskmelon"></figure>
-             <section class="itemDescription">
-                 <p class="itemName" id="itemName">Muskmelon</p>
-                 <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                 <p>Cost(per Kg): ₹75.54</p>
-                 <p>Delivery date: 2 days</p>
-                 <section class="addBtnForm">
-                     <button class="addBtn">Add</button>
-                     <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                 </section>
-             </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="corn"></figure>
-             <section class="itemDescription">
-                 <p class="itemName" id="itemName">Corn</p>
-                 <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                 <p>Cost(per Kg): ₹75.54</p>
-                 <p>Delivery date: 2 days</p>
-                 <section class="addBtnForm">
-                     <button class="addBtn">Add</button>
-                     <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                 </section>
-             </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="okra"></figure>
-             <section class="itemDescription">
-                 <p class="itemName" id="itemName">Okra</p>
-                 <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                 <p>Cost(per Kg): ₹75.54</p>
-                 <p>Delivery date: 2 days</p>
-                 <section class="addBtnForm">
-                     <button class="addBtn">Add</button>
-                     <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                 </section>
-             </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="tomato"></figure>
-              <section class="itemDescription">
-                  <p class="itemName" id="itemName">Tomato</p>
-                  <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                  <p>Cost(per Kg): ₹75.54</p>
-                  <p>Delivery date: 2 days</p>
-                  <section class="addBtnForm">
-                      <button class="addBtn">Add</button>
-                      <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                  </section>
-              </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="pea"></figure>
-             <section class="itemDescription">
-                 <p class="itemName" id="itemName">Peas</p>
-                 <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                 <p>Cost(per Kg): ₹75.54</p>
-                 <p>Delivery date: 2 days</p>
-                 <section class="addBtnForm">
-                     <button class="addBtn">Add</button>
-                     <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                 </section>
-             </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="spinach"></figure>
-             <section class="itemDescription">
-                 <p class="itemName" id="itemName">Spinach</p>
-                 <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                 <p>Cost(per Kg): ₹75.54</p>
-                 <p>Delivery date: 2 days</p>
-                 <section class="addBtnForm">
-                     <button class="addBtn">Add</button>
-                     <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                 </section>
-             </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="cabbage"></figure>
-              <section class="itemDescription">
-                  <p class="itemName" id="itemName">Cabbage</p>
-                  <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                  <p>Cost(per Kg): ₹75.54</p>
-                  <p>Delivery date: 2 days</p>
-                  <section class="addBtnForm">
-                      <button class="addBtn">Add</button>
-                      <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                  </section>
-              </section>
-            </div>
-            <div class="card">
-             <figure class="itemImgContainer" id="eggplant"></figure>
-              <section class="itemDescription">
-                  <p class="itemName" id="itemName">Eggplant</p>
-                  <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                  <p>Cost(per Kg): ₹75.54</p>
-                  <p>Delivery date: 2 days</p>
-                  <section class="addBtnForm">
-                      <button class="addBtn">Add</button>
-                      <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                  </section>
-              </section>
-            </div>
-            <div class="card">
-             <figure class="itemImgContainer" id="rice"></figure>
-              <section class="itemDescription">
-                  <p class="itemName" id="itemName">Rice</p>
-                  <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                  <p>Cost(per Kg): ₹75.54</p>
-                  <p>Delivery date: 2 days</p>
-                  <section class="addBtnForm">
-                      <button class="addBtn">Add</button>
-                      <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                  </section>
-              </section>
-            </div>
-            
-            <div class="card">
-             <figure class="itemImgContainer" id="wheat"></figure>
-              <section class="itemDescription">
-                  <p class="itemName" id="itemName">Wheat</p>
-                  <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                  <p>Cost(per Kg): ₹75.54</p>
-                  <p>Delivery date: 2 days</p>
-                  <section class="addBtnForm">
-                      <button class="addBtn">Add</button>
-                      <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                  </section>
-              </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="sugarcane"></figure>
-              <section class="itemDescription">
-                  <p class="itemName" id="itemName">Sugarcane</p>
-                  <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                  <p>Cost(per Kg): ₹75.54</p>
-                  <p>Delivery date: 2 days</p>
-                  <section class="addBtnForm">
-                      <button class="addBtn">Add</button>
-                      <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                  </section>
-              </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="oats"></figure>
-             <section class="itemDescription">
-                 <p class="itemName" id="itemName">Oats</p>
-                 <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                 <p>Cost(per Kg): ₹75.54</p>
-                 <p>Delivery date: 2 days</p>
-                 <section class="addBtnForm">
-                     <button class="addBtn">Add</button>
-                     <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                 </section>
-             </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="pear"></figure>
-             <section class="itemDescription">
-                 <p class="itemName" id="itemName">Pear</p>
-                 <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                 <p>Cost(per Kg): ₹75.54</p>
-                 <p>Delivery date: 2 days</p>
-                 <section class="addBtnForm">
-                     <button class="addBtn">Add</button>
-                     <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                 </section>
-             </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="orange"></figure>
-             <section class="itemDescription">
-                 <p class="itemName" id="itemName">Orange</p>
-                 <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                 <p>Cost(per Kg): ₹75.54</p>
-                 <p>Delivery date: 2 days</p>
-                 <section class="addBtnForm">
-                     <button class="addBtn">Add</button>
-                     <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                 </section>
-             </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="lemon"></figure>
-             <section class="itemDescription">
-                 <p class="itemName" id="itemName">Lemons</p>
-                 <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                 <p>Cost(per Kg): ₹75.54</p>
-                 <p>Delivery date: 2 days</p>
-                 <section class="addBtnForm">
-                     <button class="addBtn">Add</button>
-                     <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required>
-                 </section>
-             </section>
-            </div>
-
-            <div class="card">
-             <figure class="itemImgContainer" id="watermelon"></figure>
-             <section class="itemDescription">
-                 <p class="itemName" id="itemName">Watermelon</p>
-                 <section class="availability" style="color: rgb(53, 161, 53);">500Kg In Stock</section>
-                 <p>Cost(per Kg): ₹75.54</p>
-                 <p>Delivery date: 2 days</p>
-                 <section class="addBtnForm">
-                     <button class="addBtn">Add</button>
-                     <input type="number" placeholder="Quantity" class="numberInput" name="numberInput" min="1" max="1000" required placeholder="Quantity">
-                 </section>
-             </section>
-            </div>
-
-           </section>
-        </main>
-        <!-- 
-        <div class="icons">
-          <div class="fa-solid fa-bars" id="menu-btn"></div>
-          <div class="fa-solid fa-magnifying-glass" id="search-btn"></div>
-          <div class="fa-solid fa-cart-shopping" id="cart-btn"></div>
-          <div class="fa-solid fa-user" id="login-btn"></div>
-    
+          </section>
         </div>
-    
-        <form class="search-form">
-          <input type="search" id="search-box" placeholder="search here...">
-          <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
-        </form>
-        -->
+
+        <div class="card">
+         <figure class="itemImgContainer"  id="cabbage"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Cabbage</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+                <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="potato"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Potato</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="wheat"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Wheat</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="corn"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Corn</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="eggplant"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Eggplant</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="lemon"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Lemon</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="muskmelon"></figure>
+         <section class="itemDescription">
+             <p class="itemName">muskmelon</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="oats"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Oats</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="okra"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Okra</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="orange"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Orange</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="pea"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Pea</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="pear"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Pear</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="rice"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Rice</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="spinach"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Spinach</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="sugarcane"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Sugarcane</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="tomato"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Tomato</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="watermelon"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Watermelon</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+
+        
+
+    </section>
+      </main>
+        
      
       </header>
 
-      <div id="questionDiv">
-        <div id="innerQuestionDiv">
-             <p id="freq">Frequently Asked Questions</p>
-             <div id="questionbox">
-               <div class="questionanswer">
-                 <button class="question" onclick="ingredient()"><p>Are our ingredients organic/locally sourced?</p><p class="show" id="ing">+</p></button>
-                 <div class="answer" id="ingredientanswer"><p>We use organic milk and cream from local dairy farms, and source many of our mix-ins from local producers when possible.</p></div>  
-               </div> 
-               <div class="questionanswer">
-                 <button class="question" onclick="opening()"><p>What are our opening hours?</p><p class="show" id="open">+</p></button>
-                 <div class="answer" id="openinganswer"><p>We're open daily from 11am to 12am, with extended hours until 1am on Fridays and Saturdays.</p></div> 
-               </div>
-               <div class="questionanswer">
-                 <button class="question" onclick="nutfree()"><p>Are our ice creams nut-free?</p><p class="show" id="nutf">+</p></button>
-                 <div class="answer" id="nutfreeanswer"><p> We have several nut-free flavors, but our kitchen does process nuts. We take precautions to avoid cross-contamination, but please inform our staff of any allergies.</p></div> 
-               </div>
-               <div class="questionanswer">
-                 <button class="question" onclick="expirydate()"><p>How long does our ice cream stay fresh if you take it home?</p><p class="show" id="expd">+</p></button>
-                 <div class="answer" id="expirydateanswer"><p> Our ice cream is best enjoyed within 1-2 weeks of purchase when stored properly in a freezer at -18°C or below.</p></div>             
-               </div>  
-            </div>
+      <footer>
+        <div class="foottxt">
+          <div class="footdiv" id="know"><p class="whitetxt">Know us</p><ul style="list-style-type: none;">
+              <li><a class="footerLink">Careers</a></li>
+              <li><a class="footerLink">About us</a></li>
+              <li><a class="footerLink">releases</a></li>
+            </ul></div>
+          <div class="footdiv" id=""><p class="whitetxt">Connect</p><ul style="list-style-type: none;">
+            <li><a class="footerLink"><i class="bi bi-instagram"></i>&nbsp;Instagram</a></li>  
+            <li><a class="footerLink"><i class="bi bi-meta"></i>&nbsp;Meta</a></li>
+              <li><a class="footerLink"><i class="bi bi-twitter-x"></i>&nbsp;Twitter</a></li>
+            </ul></div>
+          <div class="footdiv" id=""><p class="whitetxt">Customer Help</p><ul style="list-style-type: none;">
+              <li><a class="footerLink">Complaints</a></li>
+              <li><a class="footerLink">Your Account</a></li>
+              <li><a class="footerLink">Refunds</a></li>
+            </ul></div>
         </div>
-      </div>
+          <p class="greytxt">Conditions of Use & Sale&nbsp;&nbsp;|&nbsp;&nbsp;Privacy Notice&nbsp;&nbsp;|&nbsp;&nbsp;Interest-Based Ads</p>
+          <span id="poo" class="greytxt"><i class="bi bi-c-circle"></i> Demo site</span>
+      </footer>
+      <script>
+        function openContractPage() {
+          window.location.href = 'contract-description.html'; // Replace with the URL of the page you want to open
+        }
+      </script>
       
-      <div class="upperFooter">
-        <div class="j" id="heading">
-             <p id="historyHeading">Our History</p>
-             <div class="j" id="historyText"><p>Scoops began in 2010 when founder NIGGA started 
-              churning small batches of ice cream in his kitchen. Inspired by his grandmother's recipes
-              and a passion for unique flavors, NIGGA's creations quickly gained a following at local 
-              farmers' markets. In 2012, we opened our first shop downtown, focusing on seasonal
-              ingredients and creative combinations. Today, with three locations across the city,
-              we continue to push the boundaries of frozen treats while staying true to our small-batch,
-              artisanal roots.</p>
-            </div>
-        </div>
-
-      </div>
-        
-        </div>
-      </div>
-      
-<footer>
-  <div class="foottxt">
-    <div class="footdiv" id="know"><p class="whitetxt">Know us</p><ul style="list-style-type: none;">
-        <li><a class="footerLink">Careers</a></li>
-        <li><a class="footerLink">About us</a></li>
-        <li><a class="footerLink">releases</a></li>
-      </ul></div>
-    <div class="footdiv" id=""><p class="whitetxt">Connect</p><ul style="list-style-type: none;">
-      <li><a class="footerLink"><i class="bi bi-instagram"></i>&nbsp;Instagram</a></li>  
-      <li><a class="footerLink"><i class="bi bi-meta"></i>&nbsp;Meta</a></li>
-        <li><a class="footerLink"><i class="bi bi-twitter-x"></i>&nbsp;Twitter</a></li>
-      </ul></div>
-    <div class="footdiv" id=""><p class="whitetxt">Customer Help</p><ul style="list-style-type: none;">
-        <li><a class="footerLink">Complaints</a></li>
-        <li><a class="footerLink">Your Account</a></li>
-        <li><a class="footerLink">Refunds</a></li>
-      </ul></div>
-  </div>
-    <p class="greytxt">Conditions of Use & Sale&nbsp;&nbsp;|&nbsp;&nbsp;Privacy Notice&nbsp;&nbsp;|&nbsp;&nbsp;Interest-Based Ads</p>
-    <span id="poo" class="greytxt"><i class="bi bi-c-circle"></i> Demo site</span>
-</footer>
-
-      <script src="contractPage.js"></script>
-</body>
-</html>
+            <script src="contractPage.js"></script>
+      </body>
+      </html>
