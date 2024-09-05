@@ -133,7 +133,7 @@ html,body{
 }
 
 main{
-    padding-top:60px;
+    padding-top:10px;
     width:100%;
     height: fit-content;
     background-color:var(--main);
@@ -159,13 +159,12 @@ main{
 }    
 
 .linksContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
  width: 100%;
  height:80px;
- background-color: black;
-
+ background-image:linear-gradient(to left,#41a58c,#5aaf4f); 
 }
 
 .links{
@@ -313,7 +312,6 @@ main{
 .homeContainer{
     width:100%;
     height:600px;
-    gap:30px;
     display:flex;
     background-color: #f2f5f6;
 }
@@ -334,7 +332,7 @@ main{
     width:100%;
     justify-content: center;
     font-size: 1.3rem;
-    margin:20px 0px;
+    margin:10px 0px 20px 0px;
 }
 #history{
 
@@ -353,25 +351,26 @@ main{
     height: 90%;
     width:90%;
     border-radius: 20px;
-    background-image:linear-gradient(#6cb7a4,#75a56f); 
-    color:white; 
+    background-image:linear-gradient(#cde7e1,#c7e3c3); 
+    color:green; 
 }
 .itemInventory{
     font-size: 1.2rem;
     margin-bottom: 12px;
 }
 .contractContainer{
-    width: 70%;
+    width: 100%;
     height:100%;
-    padding:0px 10px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contract{
-    width: 100%;
+    width: 70%;
     height:fit-content;
     background-color: white;
     margin-bottom: 20px;
-    gap:30;
     border-radius:20px;
      border: 1px solid #ccc; /* Create a basic border */
     box-shadow: 0px 5px 5px 5px #1313132f; 
@@ -441,32 +440,7 @@ main{
     width:60%;
     background-image:linear-gradient(to left,#41a58c,#5aaf4f); 
 }
-.sellContainer{
-    width:20%; 
-    height:100%;
-    justify-content:center;
-    background-color: white;
-    box-shadow: -5px 10px 5px 5px #1313132f;
-     display: flex;
-     flex-direction: column;
- } 
 
- .outerSellContainer{
-     height:90%;
-     width:100%;
-     display:flex;
-     justify-content: center;
-     align-items: center;
- }
- .innerSellContainer{
-     padding: 10px;
-     height: 95%;
-     width:90%;
-     border-radius: 20px;
-     background-image:linear-gradient(#6cb7a4,#75a56f); 
-     font-family: "Ubuntu", sans-serif;
-    color:white;  
- }
 
 /*footer--------------------------------------------------------------------------------------*/
 #questionDiv{
