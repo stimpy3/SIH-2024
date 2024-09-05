@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi-Contract Page</title>
+    <script src="https://kit.fontawesome.com/9f76eb440c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Create-contract.css">
+    <!--BOOSTRAP AND FONTAWESOME CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
+</head>
+<body>  
+    <!--NAVBAR-->
+    <nav class="navbar">
+        <figure id="logo"></figure>
+        
+        <div class="searchProfile">  
+            <div class="searchContainer">
+                <div style="width: fit-content"><input type="search" placeholder="Search..." class="searchInput"></div>
+                <button class="searchBtn"><i class="bi bi-search"></i></button>
+            </div>
+            <div class="profile">
+                <p>Profile&nbsp;</p>
+                <div class="fa-solid fa-user" id="profileBtn"></div>
+            </div>
+        </div>
+    </nav>
+    <!--NAVBAR END-->
+
+    <!--MAIN-->
+    <main>
+        <section class="topDecor">
+            <p id="exploreTxt">Create</p>
+            <p id="contractTxt">Agricultural Contract</p>
+        </section>
+        
+        <!--HOME MARKETPLACE CONTRACT-->
+        <section class="linksContainer">
+            <div class="links">
+                <a href="mainPage.html" class="btn" id="home">Home</a>
+                <a href="marketplacePage.html" class="btn" id="marketplace">Marketplace</a>
+                <a href="contractPage.html" class="btn" id="contract">Contract</a>
+            </div>
+        </section>
+
+        <section class="contractSection">
+            <div class="contractFormContainer">
+                <h2>Create a New Agricultural Contract</h2>
+                <form class="contractForm" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="farmerName">Farmer's Name:</label>
+                        <input type="text" id="farmerName" name="farmerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="buyerName">Buyer's Name:</label>
+                        <input type="text" id="buyerName" name="buyerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cropType">Crop Type:</label>
+                        <input type="text" id="cropType" name="cropType" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity (Kg):</label>
+                        <input type="number" id="quantity" name="quantity" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pricePerKg">Price per Kg (₹):</label>
+                        <input type="number" id="pricePerKg" name="pricePerKg" min="0" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="deliveryDate">Delivery Date:</label>
+                        <input type="date" id="deliveryDate" name="deliveryDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentTerms">Payment Terms:</label>
+                        <textarea id="paymentTerms" name="paymentTerms" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="contractTerms">Contract Terms:</label>
+                        <textarea id="contractTerms" name="contractTerms" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submitBtn">Create Contract</button>
+                </form>
+            </div>
+            
+            <!-- PDF Upload Section -->
+            <div class="contractDetails">
+                <div class="contractFileBox">
+                    <!-- PDF Upload Input -->
+                    <label for="uploadPDF" class="uploadPDFLabel">Upload Contract PDF</label>
+                    <input type="file" id="uploadPDF" class="uploadFileInput" accept="application/pdf" onchange="showPDFName()">
+                    <!-- PDF preview (file name) -->
+                    <div id="uploadedPDFPreview" style="display:none;">
+                        <p id="pdfFileName"></p>
+                        <a id="pdfViewLink" href="#" target="_blank">View Uploaded PDF</a>
+                    </div>
+                </div>
+                <div class="contractContent">
+                    <h2>Contract Title</h2>
+                    <p>Description of the contract or related content goes here.</p>
+                </div>
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="foottxt">
+            <div class="footdiv" id="know">
+                <p class="whitetxt">Know us</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink">Careers</a></li>
+                    <li><a class="footerLink">About us</a></li>
+                    <li><a class="footerLink">Releases</a></li>
+                </ul>
+            </div>
+            <div class="footdiv" id="">
+                <p class="whitetxt">Connect</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink"><i class="bi bi-instagram"></i>&nbsp;Instagram</a></li>  
+                    <li><a class="footerLink"><i class="bi bi-meta"></i>&nbsp;Meta</a></li>
+                    <li><a class="footerLink"><i class="bi bi-twitter-x"></i>&nbsp;Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footdiv" id="">
+                <p class="whitetxt">Customer Help</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink">Complaints</a></li>
+                    <li><a class="footerLink">Your Account</a></li>
+                    <li><a class="footerLink">Refunds</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="greytxt">Conditions of Use & Sale&nbsp;&nbsp;|&nbsp;&nbsp;Privacy Notice&nbsp;&nbsp;|&nbsp;&nbsp;Interest-Based Ads</p>
+        <span id="poo" class="greytxt"><i class="bi bi-c-circle"></i> Demo site</span>
+    </footer>
+
+    <script>
+        function showPDFName() {
+            const pdfInput = document.getElementById('uploadPDF');
+            const pdfFile = pdfInput.files[0];
+            const pdfPreview = document.getElementById('uploadedPDFPreview');
+            const pdfFileName = document.getElementById('pdfFileName');
+            const pdfViewLink = document.getElementById('pdfViewLink');
+
+            if (pdfFile) {
+                pdfFileName.textContent = `Uploaded PDF: ${pdfFile.name}`;
+                pdfViewLink.href = URL.createObjectURL(pdfFile);
+                pdfPreview.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
