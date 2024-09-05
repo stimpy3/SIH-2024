@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi-Home page</title>
+    <script src="https://kit.fontawesome.com/9f76eb440c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="marketPlace.css">
+    <!--BOOSTRAP AND FONTAWESOME CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  </head>
+<body>  
+        <!--NAVBAR-->
+         <nav class="navbar">
+            
+          <figure id="logo"></figure>
+                  
+            <div class="searchProfile">  
+              <div class="searchContainer">
+                    <div style="width: fit-content"><input type="search" placeholder="Search..." class="searchInput"></div>
+                    <button class="searchBtn"><i class="bi bi-search"></i></button>
+              </div>
+
+              <div class="profile">
+                    <p>Profile&nbsp;</p>
+                    <div class="fa-solid fa-user" id="profileBtn"></div>
+              </div>
+
+            </nav>
+        <!--NAVBAR END-->
+        </nav>
+
+       <!--MAIN-->
+       <main>
+        <section class="topDecor">
+          <p id="exploreTxt">Explore</p>
+          <p id="contractTxt">marketplace</p>
+       </section>
+        <!--HOME MARKETPLACE CONTRACT-->
+       <section class="linksContainer">
+        <div class="links">
+          <a href="home.html" class="btn" id="home">Home</a>
+          <a href="marketPlace.html" class="btn" id="marketplace">Marketplace</a>
+          <a href="mainPage.html" class="btn" id="contract">Contract</a>
+    </div>
+       </section>
+       <!-- Floating Create Contract Bar -->
+       <a href="create-contract.html" id="floatingButton">
+        <i class="bi bi-plus"></i> <!-- Using Bootstrap icons -->
+      </a>
+      
+
+       <section class="cards">
+
+        <div class="card">
+            <figure class="itemImgContainer" id="onion"></figure>
+            <section class="itemDescription">
+                <p class="itemName">Onions</p><br>
+                <section id="prices">
+                  <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+                  <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+                  <p>Pune Price: ₹<span class="price pricePune">155</span></p>                  
+                </section><br>
+                <section class="addBtnForm">
+                    <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+                </section>
+            </section>
+        </div>
+        
+
+
+        <div class="card">
+          <figure class="itemImgContainer" id="cabbage"></figure>
+          <section class="itemDescription">
+              <p class="itemName">cabbage</p><br>
+              <section id="prices">
+                <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+                <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+                <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+            
+              </section><br>
+              <section class="addBtnForm">
+                  <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+              </section>
+          </section>
+      </div>
+
+      <div class="card">
+        <figure class="itemImgContainer" id="potato"></figure>
+        <section class="itemDescription">
+            <p class="itemName">Potato</p><br>
+            <section id="prices">
+              <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+              <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+              <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+              
+            </section><br>
+            <section class="addBtnForm">
+                <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+            </section>
+        </section>
+    </div>
+
+    <div class="card">
+      <figure class="itemImgContainer" id="wheat"></figure>
+      <section class="itemDescription">
+          <p class="itemName">Wheat</p><br>
+          <section id="prices">
+            <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+            <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+            <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+            
+          </section><br>
+          <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+          </section>
+      </section>
+  </div>
+
+  <div class="card">
+    <figure class="itemImgContainer" id="corn"></figure>
+    <section class="itemDescription">
+        <p class="itemName">Corn</p><br>
+        <section id="prices">
+          <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+          <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+          <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+          
+        </section><br>
+        <section class="addBtnForm">
+            <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+        </section>
+    </section>
+</div>
+
+<div class="card">
+  <figure class="itemImgContainer" id="eggplant"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Eggplant</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+<div class="card">
+  <figure class="itemImgContainer" id="lemon"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Lemon</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+<div class="card">
+  <figure class="itemImgContainer" id="muskmelon"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Muskmelon</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+<div class="card">
+  <figure class="itemImgContainer" id="oats"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Oats</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+<div class="card">
+  <figure class="itemImgContainer" id="okra"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Okra</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+<div class="card">
+  <figure class="itemImgContainer" id="orange"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Orange</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+<div class="card">
+  <figure class="itemImgContainer" id="pea"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Pea</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+<div class="card">
+  <figure class="itemImgContainer" id="pear"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Pear</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+
+<div class="card">
+  <figure class="itemImgContainer" id="rice"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Rice</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+
+<div class="card">
+  <figure class="itemImgContainer" id="spinach"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Spinach</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+
+<div class="card">
+  <figure class="itemImgContainer" id="sugarcane"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Sugarcane</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+
+<div class="card">
+  <figure class="itemImgContainer" id="tomato"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Sugarcane</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+<div class="card">
+  <figure class="itemImgContainer" id="watermelon"></figure>
+  <section class="itemDescription">
+      <p class="itemName">Watermelon</p><br>
+      <section id="prices">
+        <p>Mumbai Price: ₹<span class="price Mumbai">160</span></p>
+        <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
+        <p>Pune Price: ₹<span class="price pricePune">155</span></p>
+        
+      </section><br>
+      <section class="addBtnForm">
+          <button class="addBtn" onclick="openContractPage()">Make Offer</button>
+      </section>
+  </section>
+</div>
+
+
+        
+
+    </section>
+      </main>
+        
+     
+      </header>
+
+      
+        
+        </div>
+      </div>
+      
+<footer>
+  <div class="foottxt">
+    <div class="footdiv" id="know"><p class="whitetxt">Know us</p><ul style="list-style-type: none;">
+        <li><a class="footerLink">Careers</a></li>
+        <li><a class="footerLink">About us</a></li>
+        <li><a class="footerLink">releases</a></li>
+      </ul></div>
+    <div class="footdiv" id=""><p class="whitetxt">Connect</p><ul style="list-style-type: none;">
+      <li><a class="footerLink"><i class="bi bi-instagram"></i>&nbsp;Instagram</a></li>  
+      <li><a class="footerLink"><i class="bi bi-meta"></i>&nbsp;Meta</a></li>
+        <li><a class="footerLink"><i class="bi bi-twitter-x"></i>&nbsp;Twitter</a></li>
+      </ul></div>
+    <div class="footdiv" id=""><p class="whitetxt">Customer Help</p><ul style="list-style-type: none;">
+        <li><a class="footerLink">Complaints</a></li>
+        <li><a class="footerLink">Your Account</a></li>
+        <li><a class="footerLink">Refunds</a></li>
+      </ul></div>
+  </div>
+    <p class="greytxt">Conditions of Use & Sale&nbsp;&nbsp;|&nbsp;&nbsp;Privacy Notice&nbsp;&nbsp;|&nbsp;&nbsp;Interest-Based Ads</p>
+    <span id="poo" class="greytxt"><i class="bi bi-c-circle"></i> Demo site</span>
+</footer>
+<script>
+  function getRandomPrice(min, max) {
+      return (Math.random() * (max - min) + min).toFixed(2);
+  }
+
+  function updatePrices() {
+      // Update Mumbai prices
+      const mumbaiPrices = document.querySelectorAll('.priceMumbai');
+      mumbaiPrices.forEach(priceElement => {
+          const randomPrice = getRandomPrice(140, 180); // Adjust range as needed
+          priceElement.textContent = randomPrice;
+      });
+
+      // Update Nagpur prices
+      const nagpurPrices = document.querySelectorAll('.priceNagpur');
+      nagpurPrices.forEach(priceElement => {
+          const randomPrice = getRandomPrice(130, 170); // Adjust range as needed
+          priceElement.textContent = randomPrice;
+      });
+
+      // Update Pune prices
+      const punePrices = document.querySelectorAll('.pricePune');
+      punePrices.forEach(priceElement => {
+          const randomPrice = getRandomPrice(140, 175); // Adjust range as needed
+          priceElement.textContent = randomPrice;
+      });
+  }
+
+  // Update prices immediately and set interval to update every 30 seconds
+  updatePrices();
+  setInterval(updatePrices, 30000); // 30 seconds in milliseconds
+
+  function openContractPage() {
+      window.location.href = 'index.html'; // Replace with the URL of the page you want to open
+  }
+</script>
+
+
+
+
+
+      <script src="marketPlace.js"></script>
+</body>
+</html>
