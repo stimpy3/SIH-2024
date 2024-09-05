@@ -148,7 +148,7 @@ main{
     background-size: cover;
     background-repeat: no-repeat;
     user-select: none;
-    padding:40px;
+    padding:80px;
     color: white;
     font-size: clamp(6rem,4rem,3rem);
     background-color: black;
