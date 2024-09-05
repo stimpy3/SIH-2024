@@ -1,0 +1,752 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;  
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;/*Dont write 100vw*/
+    min-width:300px;
+}
+:root{ --navbarGray:#f3f3f3;
+        --navbarGreen: #418d60;
+        --navbarDarkGreen:#2b5f40;
+        --footer:#102c1b;
+        --mainColor:#e8f3ec;
+
+    }
+
+.navbar{
+    width: 100%;
+    z-index: 5;
+    height:60px;
+    background-color: #f3f3f3c8;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    box-shadow: 0px 5px 10px 6px #00000022;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    
+}
+#logo{
+    background-image: url("logoBlack.png");
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80%;
+    width:20%;
+    min-width: 130px;
+    border: solid 2px #00000000;
+    float:left;
+}
+
+.searchProfile{
+    display: flex;
+    width: 30%;
+    min-width: 220px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;}
+
+.searchContainer {
+    display: flex;
+    padding: 4px 4px 4px 8px;
+    justify-content: flex-end;
+    border: none;
+    width:55%;
+    min-width: 115px;
+    height: 70%;
+    background-color: white;
+    border-radius: 60px;
+    overflow: hidden;
+    margin-right: 2%;
+    margin-left:4%;
+    align-items: center; /* Vertically center the input and button */ 
+    border: 1px solid #ccc; /* Create a basic border */
+    box-shadow: 0px 0px 5px 5px #6565651e; 
+}
+
+.searchInput::placeholder { 
+    font-size: 0.9rem;
+}
+
+
+.searchContainer input[type="search"] {
+flex:0; /*expand to fill*/
+font-size: 1rem; 
+outline: none; /*Important setting*/
+width: 100%;
+height: 100%;
+border: none;
+position: relative;
+background-color: #ffffff;
+}
+
+.searchContainer input:focus {
+    border: none; 
+}
+
+.searchContainer button{
+    flex-shrink:0;
+    padding: 0.5rem 0.5rem;
+    background-color: var(--navbarGreen);
+    border-radius: 50%;
+    color: #ffffff; 
+    border: 1px solid var(--navbarGreen);
+    cursor: pointer; /* Indicate clickable behavior */
+}
+
+.searchContainer button:hover{
+    background-color: var(--navbarDarkGreen);
+    border-color:var(--navbarDarkGreen);
+}
+
+.profile{  
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width:30%;
+    min-width: 94px;;
+    user-select: none;
+    cursor: pointer;
+}
+.profile:hover{
+    border-radius: 30px;
+    border:solid 2px var(--navbarGreen);
+    transition: 0.3s ease;
+}
+
+#profileBtn{
+    background-color: var(--navbarGreen);
+    padding: 8px;
+    color: white;
+    border-radius: 50%;
+}
+
+main{
+    padding-top:80px;
+    width:100%;
+    height: fit-content;
+    background-color:var(--main);
+    overflow-x:hidden;
+}
+/*#9ac5ad;
+#8eb39e*/
+
+.topDecor{
+    font-family: "Ubuntu", sans-serif;
+    background-image: url("images/topDecor3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
+    padding:40px;
+    color: white;
+    font-size: clamp(6rem,4rem,3rem);
+    background-color: black;
+    width: 100%;
+    height:450px;
+    position:relative;
+    box-shadow:  inset 0px 0px  5px 5px #0000003e;
+}    
+
+.linksContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+width: 100%;
+height:100px;
+background-color: #abc2a3;
+margin-top: 30px;
+}
+#floatingButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #28a745;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 100;
+}
+
+#floatingButton i {
+    color: white;
+    font-size: 24px;
+}
+
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    min-width:265px;
+    height:70%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 0px 0px 5px 5px #6565651e; 
+}
+
+.btn{
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+    user-select:none;
+    background-color: inherit;
+    height: 100%;
+    border:none;
+    padding: 0 10px;
+    text-decoration: none;
+    color:black;
+    font-size: 1.5rem;
+    border-radius: 15px;  
+
+}
+#home{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+}
+
+
+#exploreTxt{
+    font-size:9rem/*
+    background: linear-gradient(to right, #90b800, #1a9421);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;important, see what happens without this lines*/
+}
+#contractTxt{
+    font-size: 6rem;
+}
+
+.negotiationContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.negotiationContainer h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2b5f40;
+    text-align: center;
+}
+
+#offerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#offerForm label {
+    font-size: 1rem;
+    color: #333;
+}
+
+#offerForm input[type="number"],
+#offerForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#offerForm textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#offerForm button {
+    background-color: var(--navbarGreen);
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#offerForm button:hover {
+    background-color: var(--navbarDarkGreen);
+}
+
+#offerHistory {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#offerHistory h3 {
+    font-size: 1.5rem;
+    color: #2b5f40;
+    margin-bottom: 15px;
+}
+
+#finalizeAgreement {
+    display: block;
+    margin: 40px auto 0;
+    background-color: var(--navbarGreen);
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#finalizeAgreement:hover {
+    background-color: var(--navbarDarkGreen);
+}
+
+
+
+
+/*footer--------------------------------------------------------------------------------------*/
+#questionDiv{
+    box-sizing:border-box;
+    display: flex;
+    height:fit-content;
+    width: 100%;
+    background-image: linear-gradient(to top,black 50%,#434343);
+    justify-content: center;
+    border-top: 2px solid #616161;
+    padding:8% 0%;
+}
+
+#innerQuestionDiv{
+    display: flex;
+    flex-direction: column;
+    height:fit-content;
+    width: 85vw;
+    background-color: transparent;
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+    font-size: 5rem;
+    justify-content: center;
+    background-color:#ffffff;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#questionDiv #freq{
+    margin:0% 0% 5% 0%;
+}
+
+#questionbox{
+    display: flex;
+    flex-direction: column;
+}
+.questionanswer{
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    height: fit-content;
+    width: 100%;
+}
+.question{
+    cursor: pointer;
+    box-sizing: border-box;
+    padding:0px 10px;
+    width: 100%;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262626;
+    color: white;
+    border: none;
+    font-family: "Quicksand", sans-serif;
+    /*font-family:"Baloo Bhai 2", sans-serif;*/
+    font-size: 1.5rem;
+}
+.question:hover{
+    background-color: #424242;
+}
+
+.show{
+    font-size: 2rem;
+}
+.answer{
+    padding: 2px;
+    font-size: 1.2rem;
+    background-color: #191919;
+    color: white;
+    display: none;
+    font-family: "Rubik", sans-serif;
+    font-weight: 100;
+    font-family: "Rubik", sans-serif;
+    
+}
+
+.upperFooter{ box-sizing: border-box;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 5% 7.5vw 100px 7.5vw;
+    justify-content: space-between;
+    width: 100%;
+    height:fit-content;
+    background-image: url("images/blackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 2px solid #454545;
+    border-bottom: 2px solid #454545;
+}
+#heading{
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+}
+#historyHeading{
+font-size: 6rem;
+font-family: "DM Serif Display", serif;
+color:white;
+}
+#historyText{
+color: white;
+font-family: "Quicksand", sans-serif;
+}
+.imgc{
+    display: flex;
+    width: 30%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    user-select:none;
+    color: #7a7a7a;
+    text-align: center;
+    background-color: var(--footer);
+    height:fit-content;
+    width: 100%;
+    padding: 15px 0px 2% 0px;
+
+}
+
+.foottxt{
+display: flex;
+justify-content: space-evenly;
+padding: 2% 0% 1% 0%;
+margin-bottom: 2%;
+}
+#know{
+    border-left: none;
+}
+.footdiv{
+font-family: "Baloo Bhai 2", sans-serif;
+text-align: center;
+height:fit-content;;
+width:200px;
+padding: 0% 1.5% 1% 1.5%;
+border-bottom: 2px dotted #454545;
+}
+
+.whitetxt{
+    font-size: 20px;
+    color: #ffffff;
+    
+}  
+li{
+margin-top: 5px;
+margin-bottom:5px;
+}
+
+.footerLink:hover{
+    color: white;
+    cursor: pointer;
+} 
+    
+.greytxt{
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 1rem;
+    color: #7a7a7a;
+}
+@media screen and (min-device-width: 860px) and (max-device-width: 1030px), screen and (min-width: 860px) and (max-width: 1030px){
+#itemName{
+    font-size: 1.2rem;
+}
+.availability{
+    font-size: 0.8rem;
+}
+.itemDescription p{
+    font-size: 0.8rem;
+}
+.addBtnForm{
+    height: 25px;
+}
+.addBtn{
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+}
+
+@media screen and (min-device-width: 720px) and (max-device-width: 860px), screen and (min-width: 720px) and (max-width: 860px){
+    #itemName{
+        font-size: 1.2rem;
+    }
+    .itemDescription{
+        right: 5px;
+    }
+    .availability{
+        font-size: 0.6rem;
+    }
+    .itemDescription p{
+        font-size: 0.7rem;
+    }
+    .addBtnForm{
+        font-size: 0.6rem;
+        height: 20px;
+        width: 95%;
+    }
+    .addBtn{
+        font-size: 0.6rem;
+        margin-right: 5px;
+    }
+    .numberInput::placeholder{
+        font-size: 0.6rem;
+    }
+    .numberInput{
+        min-width: 40px;
+    }
+}
+
+@media screen and (min-device-width:600px) and (max-device-width: 720px), screen and (min-width: 600px) and (max-width: 720px){
+    .cards{
+    grid-template-columns: repeat(2, 1fr);}
+    #itemName{
+        font-size: 1.2rem;
+    }
+    .availability{
+        font-size: 0.8rem;
+    }
+    .itemDescription p{
+        font-size: 0.8rem;
+    }
+    .addBtnForm{
+        height: 25px;
+    }
+    .addBtn{
+        font-size: 0.8rem;
+        margin-right: 5px;
+    }
+
+}
+
+@media screen and (min-device-width: 420px) and (max-device-width: 600px), screen and (min-width: 420px) and (max-width: 600px){
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+        padding:0px;
+        row-gap:0px;
+        
+    }
+        #itemName{
+            font-size: 2rem;
+        }
+
+        .availability{
+            font-size: 1.3rem;
+        }
+        .itemDescription p{
+            font-size: 1.3rem;
+        }
+        .addBtnForm{
+            height: 30px;
+        }
+        .addBtn{
+            font-size: 1.3rem;
+            margin-right: 5px;
+        }
+
+    .card{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border-top: solid 2px rgb(210, 210, 210);
+
+    }
+    .card:hover{
+        transform: scale(1);
+        box-shadow: none;  
+    }
+}
+
+@media screen and (min-device-width:0px) and (max-device-width: 420px), screen and (min-width: 0px) and (max-width: 420px){
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+        padding:0px;
+        row-gap:0px;
+        
+    }
+        .itemName{
+            font-size: 1.2rem;
+        }
+    .card{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border-top: solid 2px rgb(210, 210, 210);
+
+    }
+    .card:hover{
+        transform: scale(1);
+        box-shadow: none;  
+    }
+}
+
+@media screen and (min-device-width: 640px) and (max-device-width: 840px), screen and (min-width: 640px) and (max-width: 840px){
+    #historyHeading{
+        font-size: 5rem;
+    }
+    .r{
+        padding: 5% 0vw 70px 3vw;
+    }
+    
+}
+
+@media screen and (min-device-width: 0px) and (max-device-width: 640px), screen and (min-width: 0px) and (max-width: 640px){
+
+.links .btn{
+    font-size: 1.2rem;
+}
+.topDecor{
+    height: 300px;
+}
+#exploreTxt{
+    font-size:5rem
+}
+#contractTxt{
+    font-size: 3rem;
+}
+
+#questionDiv{
+    padding: 8% 7.5vw;
+}
+
+#innerQuestionDiv #freq{
+    font-size: 3rem;
+    width: 100%;
+}
+.questionanswer{
+    margin-bottom: 5px;
+}
+.question{
+    padding:0px 5px;
+    font-size: 1rem;
+}
+.show{
+    font-size: 0.8rem;
+}
+.answer{
+    padding: 2px;
+    font-size: 1rem; 
+}
+.r{ padding: 5% 7.5vw 70px 7.5vw;
+}
+#heading{
+    width:100%;
+}
+#historyHeading{
+text-align: center;
+font-size: 2.5rem;
+width: 100%;
+
+}
+#historyText{
+font-size:1rem;
+width:100%;
+text-align: justify;
+text-justify: inter-word;
+}
+
+footer{
+padding: 0px 5px 5px 5px;
+box-sizing: border-box;
+
+}
+
+.footdiv{
+text-align: center;
+height:100px;
+width:fit-content;
+padding: 0% 1% 3% 1%;
+border-left: none;
+border-bottom: 2px double grey;
+
+}
+.footdiv li{
+    height: 20px;
+    padding: 1px;
+}
+.whitetxt{
+    font-size: 0.8rem;
+}  
+.footerLink{
+    font-size: 0.75rem;
+} 
+.greytxt{
+    font-size: 0.5rem;
+}
+}
+
+@media screen and (min-device-width: 0px) and (max-device-width: 380px), screen and (min-width: 0px) and (max-width: 380px){
+
+    #logo{
+        min-width: 90px;
+    }
+    .topDecor{
+        padding: 20px;
+    }
+    #exploreTxt{
+        font-size:4rem;
+    }
+    #contractTxt{
+        font-size: 2rem;
+    }
+    .searchContainer{
+    height:65%;}
+
+    .links .btn{
+        font-size: 1rem;
+    }
+    .profile p{
+    display: none;
+    }
+}
+
+@media screen and (min-device-width: 0px) and (max-device-width: 470px), screen and (min-width: 0px) and (max-width: 470px){
+footer{
+    display: none;
+}
+}
+

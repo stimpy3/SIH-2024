@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negotiation Page</title>
+    <script src="https://kit.fontawesome.com/9f76eb440c.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="negotiate.css">
+    <!-- BOOSTRAP AND FONTAWESOME CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <figure id="logo"></figure>
+        <div class="searchProfile">
+            <div class="searchContainer">
+                <div style="width: fit-content"><input type="search" placeholder="Search..." class="searchInput"></div>
+                <button class="searchBtn"><i class="bi bi-search"></i></button>
+            </div>
+            <div class="profile">
+                <p>Profile&nbsp;</p>
+                <div class="fa-solid fa-user" id="profileBtn"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- MAIN -->
+    <main>
+        <section class="topDecor">
+            <p id="exploreTxt">Negotiate</p>
+            <p id="contractTxt">with Us</p>
+        </section>
+
+        <!-- NEGOTIATION FORM -->
+        <section class="negotiationContainer">
+            <h2>Start Negotiation</h2>
+            <form id="offerForm">
+                <label for="offerAmount">Offer Amount:</label>
+                <input type="number" id="offerAmount" name="offerAmount" required>
+                
+                <label for="offerQty">Quantity:</label>
+                <input type="number" id="offerQty" name="offerQty" required>
+            
+                <label for="offerTime">Time Duration (in days):</label>
+                <input type="number" id="offerTime" name="offerTime" required>
+                
+                <label for="offerTerms">Terms:</label>
+                <textarea id="offerTerms" name="offerTerms"></textarea>
+                
+                <button type="submit" class="btn">Submit
+            
+
+            <section id="offerHistory">
+                <h3>Offer History</h3>
+                <!-- Offer history will be dynamically loaded here -->
+            </section>
+
+            <button id="finalizeAgreement" class="btn" onclick="finalizeAgreement()">Finalize Agreement</button>
+        </section>
+        <!-- NEGOTIATION FORM END -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="foottxt">
+            <div class="footdiv" id="know">
+                <p class="whitetxt">Know us</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink">Careers</a></li>
+                    <li><a class="footerLink">About us</a></li>
+                    <li><a class="footerLink">Releases</a></li>
+                </ul>
+            </div>
+            <div class="footdiv">
+                <p class="whitetxt">Connect</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink"><i class="bi bi-instagram"></i>&nbsp;Instagram</a></li>  
+                    <li><a class="footerLink"><i class="bi bi-meta"></i>&nbsp;Meta</a></li>
+                    <li><a class="footerLink"><i class="bi bi-twitter-x"></i>&nbsp;Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footdiv">
+                <p class="whitetxt">Customer Help</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink">Complaints</a></li>
+                    <li><a class="footerLink">Your Account</a></li>
+                    <li><a class="footerLink">Refunds</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="greytxt">Conditions of Use & Sale&nbsp;&nbsp;|&nbsp;&nbsp;Privacy Notice&nbsp;&nbsp;|&nbsp;&nbsp;Interest-Based Ads</p>
+        <span id="poo" class="greytxt"><i class="bi bi-c-circle"></i> Demo site</span>
+    </footer>
+
+    <script>
+        function finalizeAgreement() {
+            // Implement the finalize agreement logic here
+            alert('Agreement has been finalized.');
+        }
+    </script>
+    <script src="negotiate.js"></script>
+</body>
+</html>
