@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negotiation Page</title>
+    <script src="https://kit.fontawesome.com/9f76eb440c.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="payment.css">
+    <!-- BOOSTRAP AND FONTAWESOME CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <figure id="logo"></figure>
+        <div class="searchProfile">
+            <div class="searchContainer">
+                <div style="width: fit-content"><input type="search" placeholder="Search..." class="searchInput"></div>
+                <button class="searchBtn"><i class="bi bi-search"></i></button>
+            </div>
+            <div class="profile">
+                <p>Profile&nbsp;</p>
+                <div class="fa-solid fa-user" id="profileBtn"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- MAIN -->
+    <main>
+        <!-- Secure Payment Section -->
+        <section class="paymentOptions">
+            <h2>Choose Payment Method</h2>
+            <form id="paymentForm">
+                <div class="paymentMethod">
+                    <input type="radio" id="cardPayment" name="paymentMethod" value="card" checked>
+                    <label for="cardPayment">Credit/Debit Card</label>
+                    <div id="cardDetails" class="paymentDetails">
+                        <!-- Card Payment Fields -->
+                        <label for="cardNumber">Card Number:</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9123 4567" required>
+                        
+                        <label for="expiryDate">Expiry Date:</label>
+                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                        
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                    </div>
+                </div>
+                <div class="paymentMethod">
+                    <input type="radio" id="upiPayment" name="paymentMethod" value="upi">
+                    <label for="upiPayment">UPI</label>
+                    <div id="upiDetails" class="paymentDetails" style="display: none;">
+                        <!-- UPI Payment Fields -->
+                        <label for="upiId">UPI ID:</label>
+                        <input type="text" id="upiId" name="upiId" placeholder="yourname@upi" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Proceed to Payment</button>
+            </form>
+        </section>
+        
+        <script>
+            document.querySelectorAll('input[name="paymentMethod"]').forEach((elem) => {
+                elem.addEventListener("change", function(event) {
+                    const selectedPaymentMethod = event.target.value;
+                    document.getElementById("cardDetails").style.display = selectedPaymentMethod === "card" ? "block" : "none";
+                    document.getElementById("upiDetails").style.display = selectedPaymentMethod === "upi" ? "block" : "none";
+                });
+            });
+        </script>
+        
+        <!-- Secure Payment Section End -->
+    
+        <!-- NEGOTIATION FORM (already in your code) -->
+    </main>
+    
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="foottxt">
+            <div class="footdiv" id="know">
+                <p class="whitetxt">Know us</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink">Careers</a></li>
+                    <li><a class="footerLink">About us</a></li>
+                    <li><a class="footerLink">Releases</a></li>
+                </ul>
+            </div>
+            <div class="footdiv">
+                <p class="whitetxt">Connect</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink"><i class="bi bi-instagram"></i>&nbsp;Instagram</a></li>  
+                    <li><a class="footerLink"><i class="bi bi-meta"></i>&nbsp;Meta</a></li>
+                    <li><a class="footerLink"><i class="bi bi-twitter-x"></i>&nbsp;Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footdiv">
+                <p class="whitetxt">Customer Help</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink">Complaints</a></li>
+                    <li><a class="footerLink">Your Account</a></li>
+                    <li><a class="footerLink">Refunds</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="greytxt">Conditions of Use & Sale&nbsp;&nbsp;|&nbsp;&nbsp;Privacy Notice&nbsp;&nbsp;|&nbsp;&nbsp;Interest-Based Ads</p>
+        <span id="poo" class="greytxt"><i class="bi bi-c-circle"></i> Demo site</span>
+    </footer>
+
+    <script>
+        function finalizeAgreement() {
+            // Implement the finalize agreement logic here
+            alert('Agreement has been finalized.');
+        }
+    </script>
+    
+    <script src="payment.js"></script>
+</body>
+</html>
