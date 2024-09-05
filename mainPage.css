@@ -14,6 +14,7 @@ html,body{
         --navbarGreen: #418d60;
         --navbarDarkGreen:#2b5f40;
         --footer:#102c1b;
+        --whiteGreen:#bfe0cc;
         --mainColor:#e8f3ec;
 
       }
@@ -162,9 +163,9 @@ main{
     justify-content: center;
     align-items: center;
  width: 100%;
- height:100px;
- background-color: #abc2a3;
- margin-top: 30px;
+ height:80px;
+ background-color: black;
+
 }
 
 .links{
@@ -172,7 +173,7 @@ main{
     justify-content: space-around;
     width: 95%;
     min-width:265px;
-    height:70%;
+    height:65%;
     background-color: white;
     padding: 5px;
     border-radius: 20px;
@@ -305,64 +306,160 @@ main{
     text-align: center;
 }
 
-/*--------------------------------------IMAGES----------------------------------------------------*/
-#onion{
-    background-image: url("images/onion.png");
-}
-#potato{
-    background-image: url("images/potato.png");
-}
-#muskmelon{
-    background-image: url("images/muskmelon.png");
-}
-#corn{
-    background-image: url("images/corn.png");
-}
-#okra{
-    background-image: url("images/okra.png");
-}
-#tomato{
-    background-image: url("images/tomato.png");
-}
-#pea{
-    background-image: url("images/pea.png");
-}
-#spinach{
-    background-image: url("images/spinach.png");
-}
-#cabbage{
-    background-image: url("images/cabbage.png");
-}
-#eggplant{
-    background-image: url("images/eggplant.png");
-}
-#rice{
-    background-image: url("images/rice.png");
-}
-#wheat{
-    background-image: url("images/wheat.png");
-}
-#sugarcane{
-    background-image: url("images/sugarcane.png");
-}
-#oats{
-    background-image: url("images/oats.png");
-}
-#pear{
-    background-image: url("images/pear.png");
-}
-#orange{
-    background-image: url("images/orange.png");
-}
-#lemon{
-    background-image: url("images/lemon.png");
-}
-#watermelon{
-    background-image: url("images/watermelon.png");
-}
-/*--------------------------------------IMAGES----------------------------------------------------*/
 
+.homeContainer{
+    width:100%;
+    height:600px;
+    gap:30px;
+    display:flex;
+    background-color: #f2f5f6;
+}
+.inventoryContainer{
+   width:20%; 
+   height:100%;
+   justify-content:center;
+   background-color: white;
+   box-shadow: 5px 10px 5px 5px #1313132f;
+    display: flex;
+    flex-direction: column;
+}
+.headingHome{
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    align-items: center;
+    height:5%;
+    width:100%;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+#history{
 
+    color:#ababab;
+}
+.outerInventoryContainer{
+    height:90%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.innerInventoryContainer{
+    font-family: "Ubuntu", sans-serif;
+    padding: 20px 10px;
+    height: 90%;
+    width:90%;
+    border-radius: 20px;
+    background-image:linear-gradient(#6cb7a4,#75a56f); 
+    color:white; 
+}
+.itemInventory{
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+.contractContainer{
+    width: 70%;
+    height:100%;
+    padding:0px 10px;   
+}
+
+.contract{
+    width: 100%;
+    height:fit-content;
+    background-color: white;
+    margin-bottom: 20px;
+    gap:30;
+    border-radius:20px;
+     border: 1px solid #ccc; /* Create a basic border */
+    box-shadow: 0px 5px 5px 5px #1313132f; 
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+    font-family: "Ubuntu", sans-serif;
+}
+
+  .buyer{
+    height:fit-content;
+    width:fit-content;
+    border-radius: 10px;
+    background-image:linear-gradient(to left,#41a58c,#5aaf4f); 
+    color:white;
+    font-family: "Ubuntu", sans-serif;
+    padding:10px;
+    margin-bottom:20px;
+  }
+  .namePriceQty{
+    width:100%;
+    height:fit-content;
+    display: flex;
+    justify-content: center;
+}
+.name{
+    font-size: 3rem;
+    width:50%;
+}
+.priceQty{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  font-size:1.4rem;
+  width:50%;
+}
+.progressBarContainer{
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    height: fit-content;
+    
+}
+.dates{
+   width: 100%;
+   display:flex;
+   justify-content: space-between;
+   margin-bottom: 10px;
+}
+.dates p{
+    font-family: "Ubuntu", sans-serif;
+}
+.loader{
+    display: flex;
+    width: 100%;
+    background-color: #cdcdcd;
+    height:10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.complete{
+    width:60%;
+    background-image:linear-gradient(to left,#41a58c,#5aaf4f); 
+}
+.sellContainer{
+    width:20%; 
+    height:100%;
+    justify-content:center;
+    background-color: white;
+    box-shadow: -5px 10px 5px 5px #1313132f;
+     display: flex;
+     flex-direction: column;
+ } 
+
+ .outerSellContainer{
+     height:90%;
+     width:100%;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .innerSellContainer{
+     padding: 10px;
+     height: 95%;
+     width:90%;
+     border-radius: 20px;
+     background-image:linear-gradient(#6cb7a4,#75a56f); 
+     font-family: "Ubuntu", sans-serif;
+    color:white;  
+ }
 
 /*footer--------------------------------------------------------------------------------------*/
 #questionDiv{
@@ -788,4 +885,3 @@ footer{
     display: none;
 }
 }
- 
