@@ -400,7 +400,9 @@ main{
 }
 .priceQty{
     display: flex;
+     border-left: 2px dashed black;
     justify-content: space-between;
+    padding-left:20px;
     align-items: center;
   font-size:1.4rem;
   width:50%;
