@@ -351,8 +351,8 @@ main{
     height: 90%;
     width:90%;
     border-radius: 20px;
-     background-image:linear-gradient(to left,#41a58c,#5aaf4f);  
-    color:whie;
+     background-image:linear-gradient(to bottom,#41a58c,#5aaf4f);  
+    color:white;
 }
 .itemInventory{
     font-size: 1.2rem;
