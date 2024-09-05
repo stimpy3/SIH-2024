@@ -166,13 +166,13 @@ main{
  background-color: #abc2a3;
  margin-top: 30px;
 }
-
 .links{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 95%;
     min-width:265px;
-    height:70%;
+    height:65%;
     background-color: white;
     padding: 5px;
     border-radius: 20px;
@@ -181,6 +181,8 @@ main{
 }
 
 .btn{
+    display: flex;
+    align-items: center;
     font-family: "Ubuntu", sans-serif;
     cursor: pointer;
     user-select:none;
