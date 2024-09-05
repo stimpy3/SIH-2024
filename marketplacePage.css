@@ -202,12 +202,6 @@ main{
     text-decoration-thickness: 3px;
     text-underline-offset: 5px;
 }
-#marketplace{
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 5px;
-}
-
 
 #exploreTxt{
     font-size:9rem/*
