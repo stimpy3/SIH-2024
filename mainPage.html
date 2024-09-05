@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krishi-Home page</title>
     <script src="https://kit.fontawesome.com/9f76eb440c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="mainPage.css">
+    <link rel="stylesheet" href="contractPage.css">
     <!--BOOSTRAP AND FONTAWESOME CDN-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -34,352 +34,317 @@
         </nav>
 
        <!--MAIN-->
-        <main>
-          <section class="topDecor">
-            <p id="exploreTxt">Home</p>
-            <p id="contractTxt">page</p>
-         </section>
+       <main>
+        <section class="topDecor">
+          <p id="exploreTxt">Explore</p>
+          <p id="contractTxt">contracts</p>
+       </section>
+        <!--HOME MARKETPLACE CONTRACT-->
+       <section class="linksContainer">
+        <div class="links">
+          <button href="" class="btn" id="home">Home</button>
+          <button href="#" class="btn" id="marketplace">Marketplace</button>
+          <button href="mainPage.html" class="btn" id="contract">Contract</button>
+    </div>
+       </section>
+       <!-- Floating Create Contract Bar -->
+       <a href="create-contract.html" id="floatingButton">
+        <i class="bi bi-plus"></i> <!-- Using Bootstrap icons -->
+      </a>
+      
 
-         <section class="linksContainer">
-          <div class="links">
-            <a href="mainPage.html" class="btn" id="home">Home</a>
-            <a href="marketplacePage.html" class="btn" id="marketplace">Marketplace</a>
-            <a href="contractPage.html" class="btn" id="contract">Contract</a>
-      </div>
-         </section>
+       <section class="cards">
 
-         <div class="homeContainer">
-            <aside class="inventoryContainer">
-                <p id="inventoryHeading" class="headingHome">Inventory</p>
-                <section class="outerInventoryContainer">
-                    <section class="innerInventoryContainer">
-                       <p class="itemInventory">Onions:&nbsp;&nbsp;475Kg</p>
-                       <p class="itemInventory">Tomatoes:&nbsp;&nbsp;225Kg</p>
-                       <p class="itemInventory">Lady finger:&nbsp;&nbsp;13Kg</p>
-                       <p class="itemInventory">Mirchi:&nbsp;&nbsp;246Kg</p>
-                       <p class="itemInventory">Onions:&nbsp;&nbsp;475Kg</p>
-                       <p class="itemInventory">Cabbage:&nbsp;&nbsp;225Kg</p>
-                       <p class="itemInventory">Spinach:&nbsp;&nbsp;13Kg</p>
-                       <p class="itemInventory">Cauliflower:&nbsp;&nbsp;246Kg</p>
-                       <p class="itemInventory">Watermelon:&nbsp;&nbsp;475Kg</p>
-                       <p class="itemInventory">Potatoes:&nbsp;&nbsp;225Kg</p>
-                       <p class="itemInventory">Onions:&nbsp;&nbsp;475Kg</p>
-                       <p class="itemInventory">Cabbage:&nbsp;&nbsp;225Kg</p>
-                       <p class="itemInventory">Spinach:&nbsp;&nbsp;13Kg</p>
-                    </section>
-                </section>
-            </aside>
-               
-            <main class="contractContainer">
-                <p class="headingHome" id="history">Current Contracts</p>
-                <section class="contract">
-                   <div class="buyer">Buyer: Jai Prakash Sinha</div>
-                   <div class="namePriceQty">
-                     <div class="name">Onions</div>
-                     <div class="priceQty">
-                        <p>Price: Rs.3,777</p>
-                        <p>Quantity: 15Kg</p>
-                     </div>
-                    </div>
-                     <div class="progressBarContainer">
-                        <div class="dates">
-                            <p>7/09/24</p>
-                            <p>13/09/24</p>
-                        </div>
-                        <section class="loader">
-                            <div class="complete"></div>
-                            <div class="incomplete"></div>
-                        </section>
-                     </div>
-                   
-                </section>
+        <div class="card">
+          <figure class="itemImgContainer"  id="onion"></figure>
+          <section class="itemDescription">
+              <p class="itemName">Onions</p><br>
+              <section class="availability" >Quantity:10 
+                 quintal</section><br>
+              <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+              <p>Delivery date: 13/08/2024</p><br>
+              <section class="addBtnForm">
+                <button class="addBtn" onclick="openContractPage()">View Contract</button>
 
-                <section class="contract">
-                    <div class="buyer">Buyer:Zulfikar Chicktay</div>
-                    <div class="namePriceQty">
-                      <div class="name">Mirchi</div>
-                      <div class="priceQty">
-                         <p>Price: Rs.10,777</p>
-                         <p>Quantity: 45Kg</p>
-                      </div>
-                     </div>
-                      <div class="progressBarContainer">
-                         <div class="dates">
-                             <p>7/09/24</p>
-                             <p>13/09/24</p>
-                         </div>
-                         <section class="loader">
-                             <div class="complete"></div>
-                             <div class="incomplete"></div>
-                         </section>
-                      </div>
-                </section>
 
-                <section class="contract">
-                    <div class="buyer">Buyer: Jai Prakash Sinha</div>
-                    <div class="namePriceQty">
-                      <div class="name">Onions</div>
-                      <div class="priceQty">
-                         <p>Price: Rs.3,777</p>
-                         <p>Quantity: 15Kg</p>
-                      </div>
-                     </div>
-                      <div class="progressBarContainer">
-                         <div class="dates">
-                             <p>7/09/24</p>
-                             <p>13/09/24</p>
-                         </div>
-                         <section class="loader">
-                             <div class="complete"></div>
-                             <div class="incomplete"></div>
-                         </section>
-                      </div>
-                </section>
-
-                <section class="contract">
-                    <div class="buyer">Buyer: Jai Prakash Sinha</div>
-                    <div class="namePriceQty">
-                      <div class="name">Onions</div>
-                      <div class="priceQty">
-                         <p>Price: Rs.3,777</p>
-                         <p>Quantity: 15Kg</p>
-                      </div>
-                     </div>
-                      <div class="progressBarContainer">
-                         <div class="dates">
-                             <p>7/09/24</p>
-                             <p>13/09/24</p>
-                         </div>
-                         <section class="loader">
-                             <div class="complete"></div>
-                             <div class="incomplete"></div>
-                         </section>
-                      </div>
-                </section>
-
-                <section class="contract">
-                    <div class="buyer">Buyer: Jai Prakash Sinha</div>
-                    <div class="namePriceQty">
-                      <div class="name">Onions</div>
-                      <div class="priceQty">
-                         <p>Price: Rs.3,777</p>
-                         <p>Quantity: 15Kg</p>
-                      </div>
-                     </div>
-                      <div class="progressBarContainer">
-                         <div class="dates">
-                             <p>7/09/24</p>
-                             <p>13/09/24</p>
-                         </div>
-                         <section class="loader">
-                             <div class="complete"></div>
-                             <div class="incomplete"></div>
-                         </section>
-                      </div>
-                </section>
-
-                <section class="contract">
-                    <div class="buyer">Buyer: Jai Prakash Sinha</div>
-                    <div class="namePriceQty">
-                      <div class="name">Onions</div>
-                      <div class="priceQty">
-                         <p>Price: Rs.3,777</p>
-                         <p>Quantity: 15Kg</p>
-                      </div>
-                     </div>
-                      <div class="progressBarContainer">
-                         <div class="dates">
-                             <p>7/09/24</p>
-                             <p>13/09/24</p>
-                         </div>
-                         <section class="loader">
-                             <div class="complete"></div>
-                             <div class="incomplete"></div>
-                         </section>
-                      </div>
-                </section>
-
-                <section class="contract">
-                    <div class="buyer">Buyer: Jai Prakash Sinha</div>
-                    <div class="namePriceQty">
-                      <div class="name">Onions</div>
-                      <div class="priceQty">
-                         <p>Price: Rs.3,777</p>
-                         <p>Quantity: 15Kg</p>
-                      </div>
-                     </div>
-                      <div class="progressBarContainer">
-                         <div class="dates">
-                             <p>7/09/24</p>
-                             <p>13/09/24</p>
-                         </div>
-                         <section class="loader">
-                             <div class="complete"></div>
-                             <div class="incomplete"></div>
-                         </section>
-                      </div>
-                </section>
-
-                <section class="contract">
-                    <div class="buyer">Buyer: Jai Prakash Sinha</div>
-                    <div class="namePriceQty">
-                      <div class="name">Onions</div>
-                      <div class="priceQty">
-                         <p>Price: Rs.3,777</p>
-                         <p>Quantity: 15Kg</p>
-                      </div>
-                     </div>
-                      <div class="progressBarContainer">
-                         <div class="dates">
-                             <p>7/09/24</p>
-                             <p>13/09/24</p>
-                         </div>
-                         <section class="loader">
-                             <div class="complete"></div>
-                             <div class="incomplete"></div>
-                         </section>
-                      </div>
-                </section>
-
-                <section class="contract">
-                    <div class="buyer">Buyer: Jai Prakash Sinha</div>
-                    <div class="namePriceQty">
-                      <div class="name">Onions</div>
-                      <div class="priceQty">
-                         <p>Price: Rs.3,777</p>
-                         <p>Quantity: 15Kg</p>
-                      </div>
-                     </div>
-                      <div class="progressBarContainer">
-                         <div class="dates">
-                             <p>7/09/24</p>
-                             <p>13/09/24</p>
-                         </div>
-                         <section class="loader">
-                             <div class="complete"></div>
-                             <div class="incomplete"></div>
-                         </section>
-                      </div>
-                </section>
-
-                <section class="contract">
-                    <div class="buyer">Buyer: Jai Prakash Sinha</div>
-                    <div class="namePriceQty">
-                      <div class="name">Onions</div>
-                      <div class="priceQty">
-                         <p>Price: Rs.3,777</p>
-                         <p>Quantity: 15Kg</p>
-                      </div>
-                     </div>
-                      <div class="progressBarContainer">
-                         <div class="dates">
-                             <p>7/09/24</p>
-                             <p>13/09/24</p>
-                         </div>
-                         <section class="loader">
-                             <div class="complete"></div>
-                             <div class="incomplete"></div>
-                         </section>
-                      </div>
-                </section>
-            </main>
-  
-            <aside class="sellContainer">
-                <p id="sellHeading" class="headingHome">Negotiations</p>
-                <section class="outerSellContainer">
-                    <section class="innerSellContainer">
-                        <p class="itemInventory">hrishikesh:</p>
-                        <p class="itemInventory">adyant:</p>
-                        <p class="itemInventory">karthik:</p>
-                        <p class="itemInventory">archit:</p>
-                        <p class="itemInventory">aniket:</p>
-                        <p class="itemInventory">akanksha:</p>
-                        <p class="itemInventory">smit:</p>
-                        <p class="itemInventory">vivin:</p>
-                     
-                    </section>
-                </section>
-            </aside>
-          </div>  
-
-        </main>
-        <!-- 
-        <div class="icons">
-          <div class="fa-solid fa-bars" id="menu-btn"></div>
-          <div class="fa-solid fa-magnifying-glass" id="search-btn"></div>
-          <div class="fa-solid fa-cart-shopping" id="cart-btn"></div>
-          <div class="fa-solid fa-user" id="login-btn"></div>
-    
+              </section>
+          </section>
         </div>
-    
-        <form class="search-form">
-          <input type="search" id="search-box" placeholder="search here...">
-          <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
-        </form>
-        -->
+
+        <div class="card">
+         <figure class="itemImgContainer"  id="cabbage"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Cabbage</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+                <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="potato"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Potato</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="wheat"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Wheat</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="corn"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Corn</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="eggplant"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Eggplant</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="lemon"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Lemon</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="muskmelon"></figure>
+         <section class="itemDescription">
+             <p class="itemName">muskmelon</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="oats"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Oats</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="okra"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Okra</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="orange"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Orange</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="pea"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Pea</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="pear"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Pear</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="rice"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Rice</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="spinach"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Spinach</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="sugarcane"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Sugarcane</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="tomato"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Tomato</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+       <div class="card">
+         <figure class="itemImgContainer"  id="watermelon"></figure>
+         <section class="itemDescription">
+             <p class="itemName">Watermelon</p><br>
+             <section class="availability" >Quantity:10 
+                quintal</section><br>
+             <p style="color: rgb(53, 161, 53)">Cost: ₹1,60,000(₹160/kg)</p><br>
+             <p>Delivery date: 13/08/2024</p><br>
+             <section class="addBtnForm">
+              <button class="addBtn" onclick="openContractPage()">View Contract</button>
+             </section>
+         </section>
+       </div>
+
+
+        
+
+    </section>
+      </main>
+        
      
       </header>
 
-      <div id="questionDiv">
-        <div id="innerQuestionDiv">
-             <p id="freq">Frequently Asked Questions</p>
-             <div id="questionbox">
-               <div class="questionanswer">
-                 <button class="question" onclick="ingredient()"><p>What is contract farming?</p><p class="show" id="ing">+</p></button>
-                 <div class="answer" id="ingredientanswer"><p>Contract farming is an agricultural arrangement where a farmer agrees to produce a certain crop, livestock, or product based on an agreement with a buyer.</p></div>  
-               </div> 
-               <div class="questionanswer">
-                 <button class="question" onclick="opening()"><p>How does contract farming benefit farmers?</p><p class="show" id="open">+</p></button>
-                 <div class="answer" id="openinganswer"><p>Farmers benefit from guaranteed market access, reduced financial risk</p></div> 
-               </div>
-               <div class="questionanswer">
-                 <button class="question" onclick="nutfree()"><p>How does contract farming benefit buyers?</p><p class="show" id="nutf">+</p></button>
-                 <div class="answer" id="nutfreeanswer"><p>Buyers can ensure a consistent supply of agricultural products at a fair agreed price</p></div> 
-               </div>
-               <div class="questionanswer">
-                 <button class="question" onclick="expirydate()"><p>How can I ensure fair pricing in a contract farming agreement?</p><p class="show" id="expd">+</p></button>
-                 <div class="answer" id="expirydateanswer"><p>Fair pricing can be ensured through transparent negotiations, understanding market trends</p></div>             
-               </div>  
-            </div>
+      <footer>
+        <div class="foottxt">
+          <div class="footdiv" id="know"><p class="whitetxt">Know us</p><ul style="list-style-type: none;">
+              <li><a class="footerLink">Careers</a></li>
+              <li><a class="footerLink">About us</a></li>
+              <li><a class="footerLink">releases</a></li>
+            </ul></div>
+          <div class="footdiv" id=""><p class="whitetxt">Connect</p><ul style="list-style-type: none;">
+            <li><a class="footerLink"><i class="bi bi-instagram"></i>&nbsp;Instagram</a></li>  
+            <li><a class="footerLink"><i class="bi bi-meta"></i>&nbsp;Meta</a></li>
+              <li><a class="footerLink"><i class="bi bi-twitter-x"></i>&nbsp;Twitter</a></li>
+            </ul></div>
+          <div class="footdiv" id=""><p class="whitetxt">Customer Help</p><ul style="list-style-type: none;">
+              <li><a class="footerLink">Complaints</a></li>
+              <li><a class="footerLink">Your Account</a></li>
+              <li><a class="footerLink">Refunds</a></li>
+            </ul></div>
         </div>
-      </div>
+          <p class="greytxt">Conditions of Use & Sale&nbsp;&nbsp;|&nbsp;&nbsp;Privacy Notice&nbsp;&nbsp;|&nbsp;&nbsp;Interest-Based Ads</p>
+          <span id="poo" class="greytxt"><i class="bi bi-c-circle"></i> Demo site</span>
+      </footer>
+      <script>
+        function openContractPage() {
+          window.location.href = 'contract-description.html'; // Replace with the URL of the page you want to open
+        }
+      </script>
       
-      <div class="upperFooter">
-        <div class="j" id="heading">
-             <p id="historyHeading">Our History</p>
-             <div class="j" id="historyText"><p>We realized that farmers, the backbone of our society, needed a platform where they didn’t just grow crops but grew opportunities, security, and prosperity. Buyers, on the other hand, wanted consistency, quality, and reliability, especially in a world where supply chains were often fragile. What if we could marry those two needs into one seamless digital experience?
-                “What if we could build a bridge between farmers and buyers? A platform where they could meet, trust, and collaborate? And what if we could guarantee them both stability and reliability?”
-                That was the eureka moment. Contract farming — the perfect solution! It was an age-old practice but needed a modern, digital twist to really make it work for today's farmers and businesses.</p>
-            </div>
-        </div>
-
-      </div>
-        
-        </div>
-      </div>
-      
-<footer>
-  <div class="foottxt">
-    <div class="footdiv" id="know"><p class="whitetxt">Know us</p><ul style="list-style-type: none;">
-        <li><a class="footerLink">Careers</a></li>
-        <li><a class="footerLink">About us</a></li>
-        <li><a class="footerLink">releases</a></li>
-      </ul></div>
-    <div class="footdiv" id=""><p class="whitetxt">Connect</p><ul style="list-style-type: none;">
-      <li><a class="footerLink"><i class="bi bi-instagram"></i>&nbsp;Instagram</a></li>  
-      <li><a class="footerLink"><i class="bi bi-meta"></i>&nbsp;Meta</a></li>
-        <li><a class="footerLink"><i class="bi bi-twitter-x"></i>&nbsp;Twitter</a></li>
-      </ul></div>
-    <div class="footdiv" id=""><p class="whitetxt">Customer Help</p><ul style="list-style-type: none;">
-        <li><a class="footerLink">Complaints</a></li>
-        <li><a class="footerLink">Your Account</a></li>
-        <li><a class="footerLink">Refunds</a></li>
-      </ul></div>
-  </div>
-    <p class="greytxt">Conditions of Use & Sale&nbsp;&nbsp;|&nbsp;&nbsp;Privacy Notice&nbsp;&nbsp;|&nbsp;&nbsp;Interest-Based Ads</p>
-    <span id="poo" class="greytxt"><i class="bi bi-c-circle"></i> Demo site</span>
-</footer>
-
-      <script src="mainPage.js"></script>
-</body>
-</html>
+            <script src="mainPage.js"></script>
+      </body>
+      </html>
