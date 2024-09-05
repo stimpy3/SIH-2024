@@ -318,7 +318,7 @@
     <div class="card">
       <figure class="itemImgContainer" id="tomato"></figure>
       <section class="itemDescription">
-          <p class="itemName">Sugarcane</p><br>
+          <p class="itemName">Tomato</p><br>
           <section id="prices">
             <p>Mumbai Price: ₹<span class="price priceMumbai">160</span></p>
             <p>Nagpur Price: ₹<span class="price priceNagpur">150</span></p>
@@ -352,64 +352,7 @@
     
         </section>
         </main>
-        <!-- 
-        <div class="icons">
-          <div class="fa-solid fa-bars" id="menu-btn"></div>
-          <div class="fa-solid fa-magnifying-glass" id="search-btn"></div>
-          <div class="fa-solid fa-cart-shopping" id="cart-btn"></div>
-          <div class="fa-solid fa-user" id="login-btn"></div>
-    
-        </div>
-    
-        <form class="search-form">
-          <input type="search" id="search-box" placeholder="search here...">
-          <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
-        </form>
-        -->
-     
-      </header>
-
-      <div id="questionDiv">
-        <div id="innerQuestionDiv">
-             <p id="freq">Frequently Asked Questions</p>
-             <div id="questionbox">
-               <div class="questionanswer">
-                 <button class="question" onclick="ingredient()"><p>Are our ingredients organic/locally sourced?</p><p class="show" id="ing">+</p></button>
-                 <div class="answer" id="ingredientanswer"><p>We use organic milk and cream from local dairy farms, and source many of our mix-ins from local producers when possible.</p></div>  
-               </div> 
-               <div class="questionanswer">
-                 <button class="question" onclick="opening()"><p>What are our opening hours?</p><p class="show" id="open">+</p></button>
-                 <div class="answer" id="openinganswer"><p>We're open daily from 11am to 12am, with extended hours until 1am on Fridays and Saturdays.</p></div> 
-               </div>
-               <div class="questionanswer">
-                 <button class="question" onclick="nutfree()"><p>Are our ice creams nut-free?</p><p class="show" id="nutf">+</p></button>
-                 <div class="answer" id="nutfreeanswer"><p> We have several nut-free flavors, but our kitchen does process nuts. We take precautions to avoid cross-contamination, but please inform our staff of any allergies.</p></div> 
-               </div>
-               <div class="questionanswer">
-                 <button class="question" onclick="expirydate()"><p>How long does our ice cream stay fresh if you take it home?</p><p class="show" id="expd">+</p></button>
-                 <div class="answer" id="expirydateanswer"><p> Our ice cream is best enjoyed within 1-2 weeks of purchase when stored properly in a freezer at -18°C or below.</p></div>             
-               </div>  
-            </div>
-        </div>
-      </div>
-      
-      <div class="upperFooter">
-        <div class="j" id="heading">
-             <p id="historyHeading">Our History</p>
-             <div class="j" id="historyText"><p>Scoops began in 2010 when founder NIGGA started 
-              churning small batches of ice cream in his kitchen. Inspired by his grandmother's recipes
-              and a passion for unique flavors, NIGGA's creations quickly gained a following at local 
-              farmers' markets. In 2012, we opened our first shop downtown, focusing on seasonal
-              ingredients and creative combinations. Today, with three locations across the city,
-              we continue to push the boundaries of frozen treats while staying true to our small-batch,
-              artisanal roots.</p>
-            </div>
-        </div>
-
-      </div>
         
-        </div>
-      </div>
       
 <footer>
   <div class="foottxt">
@@ -432,6 +375,42 @@
     <p class="greytxt">Conditions of Use & Sale&nbsp;&nbsp;|&nbsp;&nbsp;Privacy Notice&nbsp;&nbsp;|&nbsp;&nbsp;Interest-Based Ads</p>
     <span id="poo" class="greytxt"><i class="bi bi-c-circle"></i> Demo site</span>
 </footer>
+<script>
+  function getRandomPrice(min, max) {
+      return (Math.random() * (max - min) + min).toFixed(2);
+  }
+
+  function updatePrices() {
+      // Update Mumbai prices
+      const mumbaiPrices = document.querySelectorAll('.priceMumbai');
+      mumbaiPrices.forEach(priceElement => {
+          const randomPrice = getRandomPrice(140, 180); // Adjust range as needed
+          priceElement.textContent = randomPrice;
+      });
+
+      // Update Nagpur prices
+      const nagpurPrices = document.querySelectorAll('.priceNagpur');
+      nagpurPrices.forEach(priceElement => {
+          const randomPrice = getRandomPrice(130, 170); // Adjust range as needed
+          priceElement.textContent = randomPrice;
+      });
+
+      // Update Pune prices
+      const punePrices = document.querySelectorAll('.pricePune');
+      punePrices.forEach(priceElement => {
+          const randomPrice = getRandomPrice(140, 175); // Adjust range as needed
+          priceElement.textContent = randomPrice;
+      });
+  }
+
+  // Update prices immediately and set interval to update every 30 seconds
+  updatePrices();
+  setInterval(updatePrices, 30000); // 30 seconds in milliseconds
+
+  function openContractPage() {
+      window.location.href = 'index.html'; // Replace with the URL of the page you want to open
+  }
+</script>
 
       <script src="marketplacePage.js"></script>
 </body>
