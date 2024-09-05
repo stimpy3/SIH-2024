@@ -158,7 +158,7 @@ main{
 }    
 
 .linksContainer{
-    background-image:linear-gradient(to left,#41a58c,#5aaf4f); 
+     background-image:linear-gradient(to left,#41a58c,#5aaf4f); 
     display: flex;
     justify-content: center;
     align-items: center;
