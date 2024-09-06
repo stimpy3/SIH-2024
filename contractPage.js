@@ -214,7 +214,7 @@ function expirydate(){
     check["exC"]=0;
     }
 }
-//------------------------------profileName
+//--------profileName---------------------------
 document.addEventListener('DOMContentLoaded', () => {
     // Get the stored email from localStorage
     const storedEmail = localStorage.getItem('userEmail');
