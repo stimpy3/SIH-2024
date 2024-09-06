@@ -1,7 +1,15 @@
-// anotherFile.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the stored email from localStorage
+    const storedEmail = localStorage.getItem('userEmail');
 
-import { initializeProfile } from './mainPage.js';
+    // Find the profile name element
+    const nameProfile = document.getElementById('nameProfile');
 
-// Call the function to set up the profile in this context as well
-initializeProfile();
-
+    if (storedEmail) {
+        // Extract the part before the '@' symbol
+        const username = storedEmail.split('@')[0];
+        nameProfile.textContent = ` ${username}`;
+    } else {
+        nameProfile.textContent = ' Profile';
+    }
+});
