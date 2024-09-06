@@ -215,6 +215,11 @@ function expirydate(){
     }
 }
 //---------------------------profileName-----------------------------------------------
+// mainPage.js
+
+// Declare `username` as a global variable
+let username = '';
+
 document.addEventListener('DOMContentLoaded', () => {
     // Get the stored email from localStorage
     const storedEmail = localStorage.getItem('userEmail');
@@ -224,10 +229,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (storedEmail) {
         // Extract the part before the '@' symbol
-        const username = storedEmail.split('@')[0];
-        nameProfile.textContent = `${username}`;
+        username = storedEmail.split('@')[0];
+        nameProfile.textContent = ` ${username}`;
     } else {
-        nameProfile.textContent = 'Profile';
+        nameProfile.textContent = ' Profile';
     }
 });
-export { username };//to other js files
+
+// Export the global `username` variable
+export { username };
