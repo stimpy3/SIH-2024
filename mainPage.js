@@ -216,24 +216,18 @@ function expirydate(){
 }
 //---------------------------profileName-----------------------------------------------
 // mainPage.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the stored email from localStorage
+    const storedEmail = localStorage.getItem('userEmail');
 
-// Define the function to initialize the profile
-function initializeProfile() {
-    document.addEventListener('DOMContentLoaded', () => {
-        const storedEmail = localStorage.getItem('userEmail');
-        const nameProfile = document.getElementById('nameProfile');
+    // Find the profile name element
+    const nameProfile = document.getElementById('nameProfile');
 
-        if (storedEmail) {
-            const username = storedEmail.split('@')[0];
-            nameProfile.textContent = ` ${username}`;
-        } else {
-            nameProfile.textContent = ' Profile';
-        }
-    });
-}
-
-// Call the function to initialize the profile on this page
-initializeProfile();
-
-// Export the function for use in other modules
-export { initializeProfile };
+    if (storedEmail) {
+        // Extract the part before the '@' symbol
+        const username = storedEmail.split('@')[0];
+        nameProfile.textContent = ` ${username}`;
+    } else {
+        nameProfile.textContent = ' Profile';
+    }
+});
