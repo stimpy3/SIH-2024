@@ -1,3 +1,4 @@
+import { username } from './mainPage.js';
 document.addEventListener('DOMContentLoaded', () => {
     // Get the stored email from localStorage
     const storedEmail=localStorage.getItem('userEmail');
