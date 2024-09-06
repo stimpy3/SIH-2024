@@ -1,79 +1,89 @@
-const passwordInput = document.getElementById('password');
-document.getElementById('showPassword').addEventListener('click', function() {
-    if (this.checked) {
-        passwordInput.type = 'text';
-    } else {
-        passwordInput.type = 'password';
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    // Elements
+    const passwordInput = document.getElementById('password');
+    const showPasswordCheckbox = document.getElementById('showPassword');
+    const signupText = document.getElementById('signup');
+    const switchTxt = document.getElementById('switchTxt');
+    const switcher = document.getElementById('loginTxt');
+    const signupBtn = document.getElementById('signupBtn');
+    const buySellContainer = document.getElementById('buySellContainer');
+    const passwordLabel = document.getElementById('passwordLabel');
+    const emailInput = document.getElementById('email');
+    const buyRadio = document.getElementById('buyRadio');
+    const sellRadio = document.getElementById('sellRadio');
+    const loginSwitch = document.getElementById('loginSwitch');
+    
+    // Flag to determine current form
+    let isSignup = true;
+
+    // Toggle password visibility
+    showPasswordCheckbox.addEventListener('change', () => {
+        passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+    });
+
+    loginSwitch.addEventListener('click', () => {
+        if (isSignup) {
+            // Switch to Login
+            buySellContainer.style.display = 'none';
+            signupText.textContent = 'Log In';
+            passwordLabel.textContent = 'Enter Password';
+            passwordInput.placeholder = 'Enter your password';
+            switchTxt.textContent = "Don't have an account?";
+            switcher.textContent = 'Sign Up';
+            signupBtn.textContent = 'Log In';
+        } else {
+            // Switch to Signup
+            buySellContainer.style.display = 'block';
+            signupText.textContent = 'Sign Up';
+            passwordLabel.textContent = 'Set Password';
+            passwordInput.placeholder = 'Create your password';
+            switchTxt.textContent = 'Already have an account?';
+            switcher.textContent = 'Log In';
+            signupBtn.textContent = 'Sign Up';
+        }
+        isSignup = !isSignup;
+    });
+
+     // Handle Signup/ Login button click
+     signupBtn.addEventListener('click', () => {
+        const emailValue = emailInput.value.trim();
+        const passwordValue = passwordInput.value.trim();
+        const isNumber = emailValue.length === 10 && /^[0-9]+$/.test(emailValue);
+        const isEmail = emailValue.includes('@') && emailValue.includes('.');
+        const isPasswordValid = passwordValue.length > 0 && !passwordValue.includes(' ');
+        const purposeSelected = buyRadio.checked || sellRadio.checked;
+
+        if (isSignup) {
+            // Signup validation
+            if ((isNumber || isEmail) && isPasswordValid && purposeSelected) {
+                // Store user data in local storage
+                localStorage.setItem('userEmail', emailValue);
+                localStorage.setItem('userPassword', passwordValue);
+                alert('Sign up successful! You can now log in.');
+                // Redirect to another page or handle post-signup logic
+                window.location.href = 'mainPage.html';
+            } else {
+                if (!(isNumber || isEmail)) {
+                    alert('Please enter a valid email address or a 10-digit mobile number.');
+                } else if (!isPasswordValid) {
+                    alert('Please set a valid password.');
+                } else if (!purposeSelected) {
+                    alert('Please select the purpose of using this website.');
+                }
+            }
+        } else {
+            // Login validation
+            const storedEmail = localStorage.getItem('userEmail');
+            const storedPassword = localStorage.getItem('userPassword');
+
+            if (emailValue === storedEmail && passwordValue === storedPassword) {
+                alert('Login successful!');
+                // Redirect to another page or show logged-in content
+                window.location.href = 'mainPage.html';
+            } else {
+                alert('Invalid email or password.');
+            }
+        }
+    });
 });
-
-signup=document.querySelector("#signup");
-switchTxt=document.querySelector("#switchTxt");
-switcher=document.querySelector("#loginTxt");
-signupBtn=document.querySelector("#signupBtn");
-buySellContainer=document.querySelector("#buySellContainer");
-passwordLabel=document.querySelector("#passwordLabel");
-passwordForm=document.querySelector("#password");
-flag="onSignup";
-
-document.querySelector("#loginTxt").addEventListener('click',function(){
-if(flag==="onSignup"){
-buySellContainer.style.display="none";
-signup.innerText="Login";
-passwordLabel.innerText="Enter Password"
-password.placeholder="Enter your password";
-switchTxt.innerText="Don't have an account?";
-switcher.innerText="Sign Up";
-signupBtn.innerText="Login";
-flag="onLogin";
-}
-else if(flag==="onLogin"){
-buySellContainer.style.display="block";
-signup.innerText="Sign Up";
-passwordLabel.innerText="Set Password"
-password.placeholder="Create your password";
-switchTxt.innerText="Already have an account?"
-switcher.innerText="Login";
-signupBtn.innerText="Sign Up";
-flag="onSignup";
-}
-});
-
-
-/*Signup loging button click*/
-const numMailForm=document.querySelector("#email");
-buyRadio=document.querySelector("#buyRadio");
-sellRadio=document.querySelector("#sellRadio");
-
-signupBtn=document.querySelector("#signupBtn");
-signupBtn.addEventListener("click", function() {
-    const numMailValue=numMailForm.value.trim();
-    const passwordValue=passwordForm.value.trim();
-    /*
-^ : Asserts the start of the string.
-[0-9] : Matches any digit from 0 to 9.
-+ : Ensures that one or more digits are present.
-$ : Asserts the end of the string.
-So, /^[0-9]+$/ will match a string that consists entirely of one 
-or more digits from start to end.
-The .test() method is used to test whether the string matches
-the regular expression. It returns true if the string matches the
-pattern and false otherwise. 
-*/
-    const isNumber=numMailValue.length === 10 && /^[0-9]+$/.test(numMailValue);/*SEE*/
-    // Check if the value contains "@" and "."
-    const isEmail=numMailValue.includes("@") && numMailValue.includes(".");
-    const isPassword=passwordValue.length > 0 && !passwordValue.includes(" ");
-    const purpose= buyRadio.checked || sellRadio.checked; //atleast 1 checked
-
-    if ((isNumber || isEmail)&&isPassword&&purpose) {
-        window.location.href = "mainPage.html"; // Redirect if the input is valid
-    } else {
-        if((isNumber || isEmail)===false){
-            alert("Please enter a valid email address or a 10-digit mobile number.");}
-        else if(isPassword===false){
-            alert("Please set a valid password");}
-        else if(purpose===false){
-            alert("Please select purpose of using this website");} 
-    }
-});
+       
