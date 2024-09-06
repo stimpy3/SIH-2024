@@ -311,7 +311,7 @@ main{
     margin-right: 10px;
     height: 100%;
     border-radius: 10px;
-    background-color: var(--navbarGreen);
+    background-image:linear-gradient(to left,#41a58c,#5aaf4f); 
     color:white;
     border:none;
 }
