@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negotiation Page</title>
+    <script src="https://kit.fontawesome.com/9f76eb440c.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="stocks.css">
+    <!-- BOOTSTRAP AND FONTAWESOME CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <figure id="logo"></figure>
+        <div class="searchProfile">
+            <div class="searchContainer">
+                <div style="width: fit-content"><input type="search" placeholder="Search..." class="searchInput"></div>
+                <button class="searchBtn"><i class="bi bi-search"></i></button>
+            </div>
+            <div class="profile">
+                <p>Profile&nbsp;</p>
+                <div class="fa-solid fa-user" id="profileBtn"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- MAIN -->
+    <main>
+        <section class="topDecor">
+            
+        </section>
+
+        <!-- SELLER NEGOTIATION TABLE -->
+        <div class="container">
+            <div class="header">
+                <h1>Onion</h1>
+                <p>24/kg</p>
+            </div>
+            <div class="location-info">
+                <label for="location">Location:</label>
+                <select id="location" name="location">
+                    <option value="mumbai">Mumbai</option>
+                    <option value="pune">Pune</option>
+                    <option value="nashik">Nashik</option>
+                    <option value="nagpur">Nagpur</option>
+                </select>
+
+                <label for="warehouse">Warehouse:</label>
+                <select id="warehouse" name="warehouse">
+                    <option value="bhiwandi">Bhiwandi</option>
+                    <option value="taloja">Taloja</option>
+                    <option value="thane">Thane</option>
+                    <option value="panvel">Panvel</option>
+                </select>
+            </div>
+            <div class="table-container">
+                <form>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Seller</th>
+                                <th>Available (Avl.)</th>
+                                <th>Quantity (Quant.)</th>
+                                <th>Amount (Amt)</th>
+                                <th>Make Offer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Seller 1</td>
+                                <td>1000 kg</td>
+                                <td><input type="number" name="quantity1" placeholder="Enter quantity" oninput="calculateAmountOrQuantity(this, true)"></td>
+                                <td><input type="number" name="amount1" placeholder="Enter amount" oninput="calculateAmountOrQuantity(this, false)"></td>
+                                <td><button type="submit">Make Offer</button></td>
+                            </tr>
+                            <tr>
+                                <td>Seller 2</td>
+                                <td>900 kg</td>
+                                <td><input type="number" name="quantity2" placeholder="Enter quantity" oninput="calculateAmountOrQuantity(this, true)"></td>
+                                <td><input type="number" name="amount2" placeholder="Enter amount" oninput="calculateAmountOrQuantity(this, false)"></td>
+                                <td><button type="submit">Make Offer</button></td>
+                            </tr>
+                            <tr>
+                                <td>Seller 3</td>
+                                <td>850 kg</td>
+                                <td><input type="number" name="quantity3" placeholder="Enter quantity" oninput="calculateAmountOrQuantity(this, true)"></td>
+                                <td><input type="number" name="amount3" placeholder="Enter amount" oninput="calculateAmountOrQuantity(this, false)"></td>
+                                <td><button type="submit">Make Offer</button></td>
+                            </tr>
+                            <tr>
+                                <td>Seller 4</td>
+                                <td>800 kg</td>
+                                <td><input type="number" name="quantity4" placeholder="Enter quantity" oninput="calculateAmountOrQuantity(this, true)"></td>
+                                <td><input type="number" name="amount4" placeholder="Enter amount" oninput="calculateAmountOrQuantity(this, false)"></td>
+                                <td><button type="submit">Make Offer</button></td>
+                            </tr>
+                            <tr>
+                                <td>Seller 5</td>
+                                <td>750 kg</td>
+                                <td><input type="number" name="quantity5" placeholder="Enter quantity" oninput="calculateAmountOrQuantity(this, true)"></td>
+                                <td><input type="number" name="amount5" placeholder="Enter amount" oninput="calculateAmountOrQuantity(this, false)"></td>
+                                <td><button type="submit">Make Offer</button></td>
+                            </tr>
+                            <tr>
+                                <td>Seller 6</td>
+                                <td>700 kg</td>
+                                <td><input type="number" name="quantity6" placeholder="Enter quantity" oninput="calculateAmountOrQuantity(this, true)"></td>
+                                <td><input type="number" name="amount6" placeholder="Enter amount" oninput="calculateAmountOrQuantity(this, false)"></td>
+                                <td><button type="submit">Make Offer</button></td>
+                            </tr>
+                            <tr>
+                                <td>Seller 7</td>
+                                <td>650 kg</td>
+                                <td><input type="number" name="quantity7" placeholder="Enter quantity" oninput="calculateAmountOrQuantity(this, true)"></td>
+                                <td><input type="number" name="amount7" placeholder="Enter amount" oninput="calculateAmountOrQuantity(this, false)"></td>
+                                <td><button type="submit">Make Offer</button></td>
+                            </tr>
+                            <tr>
+                                <td>Seller 8</td>
+                                <td>600 kg</td>
+                                <td><input type="number" name="quantity8" placeholder="Enter quantity" oninput="calculateAmountOrQuantity(this, true)"></td>
+                                <td><input type="number" name="amount8" placeholder="Enter amount" oninput="calculateAmountOrQuantity(this, false)"></td>
+                                <td><button type="submit">Make Offer</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <!-- SELLER NEGOTIATION TABLE END -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="foottxt">
+            <div class="footdiv" id="know">
+                <p class="whitetxt">Know us</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink">Careers</a></li>
+                    <li><a class="footerLink">About us</a></li>
+                    <li><a class="footerLink">Releases</a></li>
+                </ul>
+            </div>
+            <div class="footdiv">
+                <p class="whitetxt">Connect</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink"><i class="bi bi-instagram"></i>&nbsp;Instagram</a></li>  
+                    <li><a class="footerLink"><i class="bi bi-meta"></i>&nbsp;Meta</a></li>
+                    <li><a class="footerLink"><i class="bi bi-twitter-x"></i>&nbsp;Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footdiv">
+                <p class="whitetxt">Customer Help</p>
+                <ul style="list-style-type: none;">
+                    <li><a class="footerLink">Complaints</a></li>
+                    <li><a class="footerLink">Your Account</a></li>
+                    <li><a class="footerLink">Refunds</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
