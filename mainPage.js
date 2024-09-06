@@ -230,4 +230,4 @@ document.addEventListener('DOMContentLoaded', () => {
         nameProfile.textContent = 'Profile';
     }
 });
-
+export { username };//to other js files
