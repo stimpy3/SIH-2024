@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (storedEmail) {
         // Extract the part before the '@' symbol
         const username = storedEmail.split('@')[0];
-        nameProfile.textContent = `${username}`;
+        nameProfile.textContent = ` ${username}`;
     } else {
-        nameProfile.textContent = 'Profile';
+        nameProfile.textContent = ' Profile';
     }
 });
