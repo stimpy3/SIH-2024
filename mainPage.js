@@ -217,24 +217,23 @@ function expirydate(){
 //---------------------------profileName-----------------------------------------------
 // mainPage.js
 
-// Declare `username` as a global variable
-let username = '';
+// Define the function to initialize the profile
+function initializeProfile() {
+    document.addEventListener('DOMContentLoaded', () => {
+        const storedEmail = localStorage.getItem('userEmail');
+        const nameProfile = document.getElementById('nameProfile');
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Get the stored email from localStorage
-    const storedEmail = localStorage.getItem('userEmail');
+        if (storedEmail) {
+            const username = storedEmail.split('@')[0];
+            nameProfile.textContent = ` ${username}`;
+        } else {
+            nameProfile.textContent = ' Profile';
+        }
+    });
+}
 
-    // Find the profile name element
-    const nameProfile = document.getElementById('nameProfile');
+// Call the function to initialize the profile on this page
+initializeProfile();
 
-    if (storedEmail) {
-        // Extract the part before the '@' symbol
-        username = storedEmail.split('@')[0];
-        nameProfile.textContent = ` ${username}`;
-    } else {
-        nameProfile.textContent = ' Profile';
-    }
-});
-
-// Export the global `username` variable
-export { username };
+// Export the function for use in other modules
+export { initializeProfile };
