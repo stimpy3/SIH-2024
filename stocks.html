@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Negotiation Page</title>
+    <title>stocks</title>
     <script src="https://kit.fontawesome.com/9f76eb440c.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="stocks.css">
@@ -32,7 +32,9 @@
 
     <!-- MAIN -->
     <main>
-        
+        <section class="topDecor">
+            
+        </section>
 
         <!-- SELLER NEGOTIATION TABLE -->
         <div class="container">
@@ -164,4 +166,30 @@
         </div>
     </footer>
 </body>
+<script>
+    // JavaScript function to auto-fill amount or quantity
+    const marketPrice = 24; // Price per kg a
+
+    function calculateAmountOrQuantity(inputElement, isQuantity) {
+        const row = inputElement.closest('tr');
+        const quantityInput = row.querySelector('input[name^="quantity"]');
+        const amountInput = row.querySelector('input[name^="amount"]');
+
+        if (isQuantity) {
+            const quantity = parseFloat(quantityInput.value);
+            if (!isNaN(quantity)) {
+                amountInput.value = (quantity * marketPrice).toFixed(2);
+            } else {
+                amountInput.value = '';
+            }
+        } else {
+            const amount = parseFloat(amountInput.value);
+            if (!isNaN(amount)) {
+                quantityInput.value = (amount / marketPrice).toFixed(2);
+            } else {
+                quantityInput.value = '';
+            }
+        }
+    }
+</script>
 </html>
